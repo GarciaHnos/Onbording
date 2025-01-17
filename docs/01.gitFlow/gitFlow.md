@@ -1,5 +1,7 @@
-# Documentación Git con Barra Lateral
-
+# GitFLow
+![](img/icono-git1.png)
+![](img/icono-github1.png)
+<!--
 ## Índice
 - [Configuración Inicial de Git](#configuración-inicial-de-git)
 - [Git Flow para Manejo de Repositorios](#git-flow-para-manejo-de-repositorios)
@@ -13,6 +15,7 @@
     - [Guardar Cambios](#b-guardar-cambios)
     - [Sincronizar con el Repositorio Remoto](#c-sincronizar-con-el-repositorio-remoto)
 - [Consejos Adicionales](#consejos-adicionales)
+ -->
 
 ---
 

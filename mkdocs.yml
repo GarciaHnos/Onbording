@@ -1,0 +1,32 @@
+site_name: García Hermanos Agroindustrial S.R.L.
+site_url: https://garciahnos.github.io/Onbording/
+
+nav:
+ - Inicio: index.md
+ - Estrategia: estrategia/estrategia.md
+ - MkDocs: mkDocs/mkDocs.md
+ - Git, GitHub & GitFlow: 01.gitFlow/gitFlow.md
+
+site_author: It
+site_description: >-
+  Onbording
+
+repo_name: Onbording
+repo_url: https://github.com/GarciaHnos/Onbording
+
+theme:
+  name: material 
+  language: es
+  logo: assets/logo-gh.png 
+  favicon: assets/logo-gh.png 
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
