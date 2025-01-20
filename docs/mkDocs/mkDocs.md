@@ -5,7 +5,7 @@ La sintaxis básica de Markdown es aquella que fue definida originalmente por Jo
 
 A continuación vamos a detallar cuáles son los diferente selementos de la sintaxis básica de Markdown, de modo que puedas comenzar a crear documentos con este formato.
 
-Párrafos
+#Párrafos
 Para crear un nuevo párrafo en Markdown basta con que dejes una línea en blanco entre una o más líneas de texto, tal y como ves en este ejemplo:
 
 Este es un párrafo.
