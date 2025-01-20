@@ -1,4 +1,4 @@
-# GitFLow
+# Git
 ![](img/icono-git1.png)
 ![](img/icono-github1.png)
 <!--
@@ -21,7 +21,14 @@
 
 ## Configuración Inicial de Git
 
-Una vez instalado Git, es importante configurarlo para trabajar correctamente. Sigue los siguientes pasos:
+Recomendamos utilizar Git Bash para manejar Git desde la consola. Para acceder a Git Bash:
+
+1. Instala Git desde su [página oficial](https://git-scm.com/).
+2. Una vez instalado, busca "Git Bash" en tu sistema operativo y ejecútalo.
+3. Usa los comandos que se mencionaran a continuación directamente en la consola de Git Bash.
+
+---
+Una vez instalado Git, es importante configurarlo para trabajar correctamente.
 
 ### 1. Configurar el Nombre y el Correo Electrónico
 Estos datos se asocian con los commits que realices:
@@ -75,7 +82,13 @@ mkdir mi-proyecto
 git init
 ```
 
-Esto creará un repositorio vacío en la carpeta `mi-proyecto`.
+Esto creará un repositorio vacío en la carpeta `mi-proyecto`. Al crearlo, Git automáticamente genera una rama principal llamada `main`.
+
+Si necesitas crear otra rama, puedes hacerlo con el siguiente comando:
+
+```bash
+git checkout -b nombre-de-la-rama
+```
 
 ### 2. Agregar Archivos al Repositorio
 Añade archivos o carpetas y verifica su estado:
@@ -111,10 +124,10 @@ git remote add origin https://github.com/usuario/mi-proyecto.git
 Envía los cambios locales al repositorio remoto:
 
 ```bash
-git push -u origin main
+git push origin main
 ```
 
-La opción `-u` establece la rama remota como la predeterminada para futuras actualizaciones.
+Asegúrate de indicar siempre explícitamente la rama al realizar `git push` para evitar errores al trabajar con múltiples ramas.
 
 ### 6. Flujo de Trabajo Diario
 #### a. Realizar Cambios
@@ -134,6 +147,9 @@ git diff
 # Añadir cambios al área de staging
 git add .
 
+# O seleccionar archivos específicos interactivamente
+git add -i
+
 # Crear un commit
 git commit -m "Descripción del cambio"
 ```
@@ -148,10 +164,39 @@ git pull origin main
 Luego, sube tus cambios:
 
 ```bash
-git push
+git push origin main
 ```
 
 ---
+
+## Ambientes de Trabajo
+
+### Directorios en Git
+Git organiza los archivos en tres áreas principales:
+
+1. **Directorio de Trabajo (Working Directory):** Donde realizas cambios en los archivos.
+2. **Área de Staging (Staging Area):** Una zona intermedia donde preparas los cambios antes de confirmarlos.
+3. **Repositorio Local (Local Repository):** Donde se almacenan los commits confirmados.
+
+### Convenciones de Ramas
+
+1. **`main`:** Representa el ambiente productivo. Los cambios aquí deben estar completamente probados y listos para desplegar.
+2. **`hotfix`:** Usada para resolver errores críticos detectados en producción.
+3. **`release`:** Rama utilizada para preparar una versión para su despliegue. Permite realizar pruebas finales antes de integrarla en `main`.
+4. **`develop`:** Contiene el código en desarrollo que aún no está listo para producción. Aquí se integran las ramas `feature`.
+5. **`feature/<id-jira>`:** Usada para desarrollar nuevas funcionalidades. El nombre de la rama debe incluir el ID del ticket de Jira para facilitar el seguimiento.
+
+Para crear una nueva rama de feature:
+
+```bash
+git checkout -b feature/<id-jira>
+```
+
+### Ambientes Preproductivo y Productivo
+- **Productivo:** Corresponde a la rama `main`. Aquí reside el código listo para ser desplegado.
+- **Preproductivo:** Utilizado para pruebas antes de la integración final en `main`. Incluye las ramas:
+  - **`release`:** Preparación para una versión específica.
+  - **`hotfix`:** Correcciones críticas en producción.
 
 ## Consejos Adicionales
 - **Ignorar Archivos:** Usa un archivo `.gitignore` para excluir archivos o carpetas no deseadas:
@@ -163,7 +208,7 @@ git push
 - **Resolver Conflictos:** Si hay conflictos al hacer un `git pull`, edita los archivos afectados, luego realiza un commit:
   ```bash
   git add archivo_conflictivo
-git commit -m "Resuelto conflicto en archivo_conflictivo"
+  git commit -m "Resuelto conflicto en archivo_conflictivo"
   ```
 
 ¡Con estos pasos tienes lo básico para empezar a trabajar con Git! 🎉
