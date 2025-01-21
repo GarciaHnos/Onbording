@@ -2,10 +2,14 @@ site_name: García Hermanos Agroindustrial S.R.L.
 site_url: https://garciahnos.github.io/Onbording/
 
 nav:
- - Inicio: index.md
- - Estrategia: estrategia/estrategia.md
- - MkDocs: mkDocs/mkDocs.md
- - Git, GitHub & GitFlow: 01.gitFlow/gitFlow.md
+  - Inicio: index.md
+  - Estrategia: estrategia/estrategia.md
+  - Git, GitHub & GitFlow: git/git.md
+    - Configuracion Inicial: git/configInicial/configInicial.md
+    - Directorios: git/directorios/directorios.md
+    - Manejo de Repositorios: git/manejoDeRepositorios/manejoDeRepositorios.md
+    - Git Flow: git/gitFlow/gitFlow.md
+  - MkDocs: mkDocs/mkDocs.md
 
 site_author: It
 site_description: >-
