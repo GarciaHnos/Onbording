@@ -10,7 +10,10 @@ nav:
     - Directorios: git/directorios/directorios.md
     - Manejo de Repositorios: git/manejoDeRepositorios/manejoDeRepositorios.md
     - Git Flow: git/gitFlow/gitFlow.md
+  - Draft: 
+    - Relevamiento de Programas: draft/relevamientoProgramas/relevamientoProgramas.md
   - MkDocs: mkDocs/mkDocs.md
+  
 
 site_author: It
 site_description: >-
