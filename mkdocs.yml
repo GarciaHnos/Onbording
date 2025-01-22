@@ -4,7 +4,8 @@ site_url: https://garciahnos.github.io/Onbording/
 nav:
   - Inicio: index.md
   - Estrategia: estrategia/estrategia.md
-  - Git, GitHub & GitFlow: git/git.md
+  - Git, GitHub & GitFlow: 
+    - Introduccion: git/introduccionGit/introduccionGit.md
     - Configuracion Inicial: git/configInicial/configInicial.md
     - Directorios: git/directorios/directorios.md
     - Manejo de Repositorios: git/manejoDeRepositorios/manejoDeRepositorios.md
