@@ -15,56 +15,57 @@ Este flujo describe las buenas prácticas al trabajar con Git y GitHub, desde la
 
 ### 1. Crear una Rama `feature`
 1. Asegúrate de estar en la rama `develop` (o la rama base según corresponda):
-   ```bash
+```bash
    git checkout develop
    git pull origin develop
-   ```
+```
 
 2. Crea y cambia a una nueva rama `feature`:
-   ```bash
+```bash
    git checkout -b feature/<id-ticketJira>
-   ```
+```
 
 3. Comienza a desarrollar la funcionalidad requerida.
 
 ### 2. Realizar Cambios y Commits
 1. Verifica los cambios realizados:
-   ```bash
+```bash
    git status
-   ```
+```
 
 2. Selecciona los archivos para agregar al área de staging:
-   ```bash
+```bash
    git add archivo1 archivo2
    # O de forma interactiva:
    git add -i
-   ```
+```
 
 3. Realiza un commit con una descripción clara:
-   ```bash
+```bash
    git commit -m "[<id-ticketJira>] Implementación de nueva funcionalidad."
-   ```
+```
 
 4. Repite este paso hasta completar la funcionalidad.
 
 ### 3. Actualizar la Rama `feature` con `develop`
 1. Asegúrate de que la rama `develop` tenga los últimos cambios:
-   ```bash
+
+```bash
    git checkout develop
    git pull origin develop
-   ```
+ ```
 
 2. Cambia a la rama `feature` y realiza un merge de `develop` para mantenerla actualizada:
-   ```bash
+```bash
    git checkout feature/<id-ticketJira>
    git merge develop
-   ```
+ ```
 
 3. Resuelve conflictos si es necesario, luego realiza un commit:
-   ```bash
+```bash
    git add archivos_conflictivos
    git commit -m "Resueltos conflictos entre develop y feature/<id-ticketJira>."
-   ```
+```
 
 ### 4. Subir la Rama al Repositorio Remoto
 Sube los cambios de tu rama `feature` al repositorio remoto:
@@ -84,23 +85,23 @@ git push origin feature/<id-ticketJira>
 ### 6. Revisar y Fusionar el Pull Request
 1. Los revisores deben validar los cambios y aprobar el PR.
 2. Antes de fusionar, asegúrate de actualizar la rama `feature` con los últimos cambios de `develop`:
-   ```bash
+```bash
    git checkout feature/<id-ticketJira>
    git merge develop
-   ```
+```
 3. Una vez actualizado, los revisores pueden proceder a fusionar el PR en `develop`.
 
 ### 7. Crear una Rama `release` (Cuando Proceda)
 1. Si la funcionalidad está lista para pruebas finales, crea una rama `release` desde `develop`:
-   ```bash
+```bash
    git checkout develop
    git pull origin develop
    git checkout -b release/<version>
-   ```
+```
 
 2. Realiza pruebas finales en esta rama y aplica ajustes menores si es necesario.
 3. Una vez aprobada, fusiona la rama `release` en `main` y `develop`:
-   ```bash
+```bash
    git checkout main
    git merge release/<version>
    git push origin main
@@ -108,17 +109,17 @@ git push origin feature/<id-ticketJira>
    git checkout develop
    git merge release/<version>
    git push origin develop
-   ```
+```
 
 ### 8. Integración Final en `main`
 1. Cuando una versión esté lista para producción:
    - Fusiona `release` en `main`.
 
 2. Elimina ramas temporales:
-   ```bash
+```bash
    git branch -d feature/<id-ticketJira>
    git push origin --delete feature/<id-ticketJira>
-   ```
+```
 
 ---
 

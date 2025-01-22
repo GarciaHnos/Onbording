@@ -18,7 +18,7 @@
         <link rel="prev" href="../../manejoDeRepositorios/manejoDeRepositorios/">
       
       
-        <link rel="next" href="../../../mkDocs/mkDocs/">
+        <link rel="next" href="../../../draft/relevamientoProgramas/relevamientoProgramas/">
       
       
       <link rel="icon" href="../../../assets/logo-gh.png">
@@ -588,6 +588,69 @@
   
   
   
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Draft
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Draft
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../draft/relevamientoProgramas/relevamientoProgramas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Relevamiento de Programas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../mkDocs/mkDocs/" class="md-nav__link">
         
@@ -765,65 +828,59 @@
 <h2 id="flujo-de-trabajo">Flujo de Trabajo</h2>
 <h3 id="1-crear-una-rama-feature">1. Crear una Rama <code>feature</code></h3>
 <ol>
-<li>
-<p>Asegúrate de estar en la rama <code>develop</code> (o la rama base según corresponda):
-   <code>bash
-   git checkout develop
-   git pull origin develop</code></p>
-</li>
-<li>
-<p>Crea y cambia a una nueva rama <code>feature</code>:
-   <code>bash
-   git checkout -b feature/&lt;id-ticketJira&gt;</code></p>
-</li>
-<li>
-<p>Comienza a desarrollar la funcionalidad requerida.</p>
-</li>
+<li>Asegúrate de estar en la rama <code>develop</code> (o la rama base según corresponda):</li>
+</ol>
+<pre><code class="language-bash">   git checkout develop
+   git pull origin develop
+</code></pre>
+<ol>
+<li>Crea y cambia a una nueva rama <code>feature</code>:</li>
+</ol>
+<pre><code class="language-bash">   git checkout -b feature/&lt;id-ticketJira&gt;
+</code></pre>
+<ol>
+<li>Comienza a desarrollar la funcionalidad requerida.</li>
 </ol>
 <h3 id="2-realizar-cambios-y-commits">2. Realizar Cambios y Commits</h3>
 <ol>
-<li>
-<p>Verifica los cambios realizados:
-   <code>bash
-   git status</code></p>
-</li>
-<li>
-<p>Selecciona los archivos para agregar al área de staging:
-   <code>bash
-   git add archivo1 archivo2
+<li>Verifica los cambios realizados:</li>
+</ol>
+<pre><code class="language-bash">   git status
+</code></pre>
+<ol>
+<li>Selecciona los archivos para agregar al área de staging:</li>
+</ol>
+<pre><code class="language-bash">   git add archivo1 archivo2
    # O de forma interactiva:
-   git add -i</code></p>
-</li>
-<li>
-<p>Realiza un commit con una descripción clara:
-   <code>bash
-   git commit -m "[&lt;id-ticketJira&gt;] Implementación de nueva funcionalidad."</code></p>
-</li>
-<li>
-<p>Repite este paso hasta completar la funcionalidad.</p>
-</li>
+   git add -i
+</code></pre>
+<ol>
+<li>Realiza un commit con una descripción clara:</li>
+</ol>
+<pre><code class="language-bash">   git commit -m &quot;[&lt;id-ticketJira&gt;] Implementación de nueva funcionalidad.&quot;
+</code></pre>
+<ol>
+<li>Repite este paso hasta completar la funcionalidad.</li>
 </ol>
 <h3 id="3-actualizar-la-rama-feature-con-develop">3. Actualizar la Rama <code>feature</code> con <code>develop</code></h3>
 <ol>
-<li>
-<p>Asegúrate de que la rama <code>develop</code> tenga los últimos cambios:
-   <code>bash
-   git checkout develop
-   git pull origin develop</code></p>
-</li>
-<li>
-<p>Cambia a la rama <code>feature</code> y realiza un merge de <code>develop</code> para mantenerla actualizada:
-   <code>bash
-   git checkout feature/&lt;id-ticketJira&gt;
-   git merge develop</code></p>
-</li>
-<li>
-<p>Resuelve conflictos si es necesario, luego realiza un commit:
-   <code>bash
-   git add archivos_conflictivos
-   git commit -m "Resueltos conflictos entre develop y feature/&lt;id-ticketJira&gt;."</code></p>
-</li>
+<li>Asegúrate de que la rama <code>develop</code> tenga los últimos cambios:</li>
 </ol>
+<pre><code class="language-bash">   git checkout develop
+   git pull origin develop
+ ```
+
+2. Cambia a la rama `feature` y realiza un merge de `develop` para mantenerla actualizada:
+```bash
+   git checkout feature/&lt;id-ticketJira&gt;
+   git merge develop
+ ```
+
+3. Resuelve conflictos si es necesario, luego realiza un commit:
+```bash
+   git add archivos_conflictivos
+   git commit -m &quot;Resueltos conflictos entre develop y feature/&lt;id-ticketJira&gt;.&quot;
+</code></pre>
 <h3 id="4-subir-la-rama-al-repositorio-remoto">4. Subir la Rama al Repositorio Remoto</h3>
 <p>Sube los cambios de tu rama <code>feature</code> al repositorio remoto:</p>
 <pre><code class="language-bash">git push origin feature/&lt;id-ticketJira&gt;
@@ -841,34 +898,34 @@
 <h3 id="6-revisar-y-fusionar-el-pull-request">6. Revisar y Fusionar el Pull Request</h3>
 <ol>
 <li>Los revisores deben validar los cambios y aprobar el PR.</li>
-<li>Antes de fusionar, asegúrate de actualizar la rama <code>feature</code> con los últimos cambios de <code>develop</code>:
-   <code>bash
-   git checkout feature/&lt;id-ticketJira&gt;
-   git merge develop</code></li>
+<li>Antes de fusionar, asegúrate de actualizar la rama <code>feature</code> con los últimos cambios de <code>develop</code>:</li>
+</ol>
+<pre><code class="language-bash">   git checkout feature/&lt;id-ticketJira&gt;
+   git merge develop
+</code></pre>
+<ol>
 <li>Una vez actualizado, los revisores pueden proceder a fusionar el PR en <code>develop</code>.</li>
 </ol>
 <h3 id="7-crear-una-rama-release-cuando-proceda">7. Crear una Rama <code>release</code> (Cuando Proceda)</h3>
 <ol>
-<li>
-<p>Si la funcionalidad está lista para pruebas finales, crea una rama <code>release</code> desde <code>develop</code>:
-   <code>bash
-   git checkout develop
-   git pull origin develop
-   git checkout -b release/&lt;version&gt;</code></p>
-</li>
-<li>
-<p>Realiza pruebas finales en esta rama y aplica ajustes menores si es necesario.</p>
-</li>
-<li>Una vez aprobada, fusiona la rama <code>release</code> en <code>main</code> y <code>develop</code>:
-   ```bash
-   git checkout main
-   git merge release/<version>
-   git push origin main</li>
+<li>Si la funcionalidad está lista para pruebas finales, crea una rama <code>release</code> desde <code>develop</code>:</li>
 </ol>
-<p>git checkout develop
-   git merge release/<version>
+<pre><code class="language-bash">   git checkout develop
+   git pull origin develop
+   git checkout -b release/&lt;version&gt;
+</code></pre>
+<ol>
+<li>Realiza pruebas finales en esta rama y aplica ajustes menores si es necesario.</li>
+<li>Una vez aprobada, fusiona la rama <code>release</code> en <code>main</code> y <code>develop</code>:</li>
+</ol>
+<pre><code class="language-bash">   git checkout main
+   git merge release/&lt;version&gt;
+   git push origin main
+
+   git checkout develop
+   git merge release/&lt;version&gt;
    git push origin develop
-   ```</p>
+</code></pre>
 <h3 id="8-integracion-final-en-main">8. Integración Final en <code>main</code></h3>
 <ol>
 <li>Cuando una versión esté lista para producción:</li>
@@ -876,12 +933,12 @@
 <p>Fusiona <code>release</code> en <code>main</code>.</p>
 </li>
 <li>
-<p>Elimina ramas temporales:
-   <code>bash
-   git branch -d feature/&lt;id-ticketJira&gt;
-   git push origin --delete feature/&lt;id-ticketJira&gt;</code></p>
+<p>Elimina ramas temporales:</p>
 </li>
 </ol>
+<pre><code class="language-bash">   git branch -d feature/&lt;id-ticketJira&gt;
+   git push origin --delete feature/&lt;id-ticketJira&gt;
+</code></pre>
 <hr />
 <h2 id="notas-y-buenas-practicas">Notas y Buenas Prácticas</h2>
 <ul>
