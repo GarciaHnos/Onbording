@@ -12,13 +12,13 @@
         <meta name="author" content="It">
       
       
-        <link rel="canonical" href="https://garciahnos.github.io/Onbording/estrategia/estrategia/">
+        <link rel="canonical" href="https://garciahnos.github.io/Onbording/estrategia/eventStorming/">
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../estrategia/">
       
       
-        <link rel="next" href="../eventStorming/">
+        <link rel="next" href="../../git/introduccionGit/introduccionGit/">
       
       
       <link rel="icon" href="../../assets/logo-gh.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Estrategia - García Hermanos Agroindustrial S.R.L.</title>
+        <title>Event Storming - García Hermanos Agroindustrial S.R.L.</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#propuesta-del-area-de-sistemas-para-el-desarrollo-y-despliegue-de-aplicaciones-on-premise" class="md-skip">
+        <a href="#guia-de-event-storming" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Estrategia
+              Event Storming
             
           </span>
         </div>
@@ -277,6 +277,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../estrategia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estrategia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -294,7 +316,7 @@
   
   
   <span class="md-ellipsis">
-    Estrategia
+    Event Storming
     
   </span>
   
@@ -307,7 +329,7 @@
   
   
   <span class="md-ellipsis">
-    Estrategia
+    Event Storming
     
   </span>
   
@@ -330,91 +352,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
+  <a href="#paso-1-recoleccion-de-eventos-de-dominio-big-picture" class="md-nav__link">
     <span class="md-ellipsis">
-      Introducción
+      Paso 1 — Recolección de Eventos de Dominio (Big Picture)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#objetivos" class="md-nav__link">
+  <a href="#paso-2-depurar-y-alinear-los-eventos-de-dominio" class="md-nav__link">
     <span class="md-ellipsis">
-      Objetivos
+      Paso 2 — Depurar y alinear los Eventos de Dominio
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#propuesta-tecnologica" class="md-nav__link">
-    <span class="md-ellipsis">
-      Propuesta Tecnológica
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Propuesta Tecnológica">
+    <nav class="md-nav" aria-label="Paso 2 — Depurar y alinear los Eventos de Dominio">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-desarrollo-y-colaboracion" class="md-nav__link">
+  <a href="#1-lectura-storytelling" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Desarrollo y Colaboración
+      1. Lectura &amp; Storytelling 📖
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-contenerizacion-y-virtualizacion" class="md-nav__link">
+  <a href="#2-chequeo-sintactico" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Contenerización y Virtualización
+      2. Chequeo sintáctico ✔️
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-automatizacion-y-despliegue" class="md-nav__link">
+  <a href="#3-consolidacion-de-vocabulario" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Automatización y Despliegue
+      3. Consolidación de vocabulario 🗂
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-monitoreo-y-analisis" class="md-nav__link">
+  <a href="#4-correccion-de-la-linea-temporal" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Monitoreo y Análisis
+      4. Corrección de la línea temporal ⏱
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-seguridad-y-gestion-de-accesos" class="md-nav__link">
+  <a href="#5-deduplicar-y-fusionar" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Seguridad y Gestión de Accesos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-base-de-datos-y-almacenamiento" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Base de Datos y Almacenamiento
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-orquestacion-integral-opcional" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Orquestación Integral (Opcional)
+      5. Deduplicar y fusionar 🔄
     </span>
   </a>
   
@@ -426,38 +421,137 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flujo-de-trabajo-propuesto" class="md-nav__link">
+  <a href="#paso-3-identificar-que-dispara-cada-evento" class="md-nav__link">
     <span class="md-ellipsis">
-      Flujo de Trabajo Propuesto
+      Paso 3 — Identificar qué dispara cada evento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 3 — Identificar qué dispara cada evento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dinamica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dinámica 👣
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#beneficios-de-la-implementacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Beneficios de la Implementación
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#paso-4-detectar-agregados-y-limites-transaccionales" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusión
+      Paso 4 — Detectar Agregados y límites transaccionales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 4 — Detectar Agregados y límites transaccionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agrupacion-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agrupación visual 🖼
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#proximos-pasos" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#preguntas-clave" class="md-nav__link">
     <span class="md-ellipsis">
-      Próximos Pasos
+      Preguntas clave ❓
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chequear-invariantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chequear invariantes 🛡
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refinar-fronteras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refinar fronteras 🪄
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-5-profundizar-en-politicas-y-reglas-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 5 — Profundizar en Políticas y reglas de negocio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 5 — Profundizar en Políticas y reglas de negocio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clasificar-post-its-morados" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Clasificar post-its morados 🎭
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-anotar-disparadores-y-efectos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Anotar disparadores y efectos 🖇
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-revisar-side-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Revisar side-effects 🌐
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-enumerar-reglas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Enumerar reglas clave 📜
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-definir-prioridades" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Definir prioridades ⭐
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -465,28 +559,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../eventStorming/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Event Storming
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -768,91 +840,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
+  <a href="#paso-1-recoleccion-de-eventos-de-dominio-big-picture" class="md-nav__link">
     <span class="md-ellipsis">
-      Introducción
+      Paso 1 — Recolección de Eventos de Dominio (Big Picture)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#objetivos" class="md-nav__link">
+  <a href="#paso-2-depurar-y-alinear-los-eventos-de-dominio" class="md-nav__link">
     <span class="md-ellipsis">
-      Objetivos
+      Paso 2 — Depurar y alinear los Eventos de Dominio
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#propuesta-tecnologica" class="md-nav__link">
-    <span class="md-ellipsis">
-      Propuesta Tecnológica
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Propuesta Tecnológica">
+    <nav class="md-nav" aria-label="Paso 2 — Depurar y alinear los Eventos de Dominio">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-desarrollo-y-colaboracion" class="md-nav__link">
+  <a href="#1-lectura-storytelling" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Desarrollo y Colaboración
+      1. Lectura &amp; Storytelling 📖
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-contenerizacion-y-virtualizacion" class="md-nav__link">
+  <a href="#2-chequeo-sintactico" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Contenerización y Virtualización
+      2. Chequeo sintáctico ✔️
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-automatizacion-y-despliegue" class="md-nav__link">
+  <a href="#3-consolidacion-de-vocabulario" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Automatización y Despliegue
+      3. Consolidación de vocabulario 🗂
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-monitoreo-y-analisis" class="md-nav__link">
+  <a href="#4-correccion-de-la-linea-temporal" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Monitoreo y Análisis
+      4. Corrección de la línea temporal ⏱
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-seguridad-y-gestion-de-accesos" class="md-nav__link">
+  <a href="#5-deduplicar-y-fusionar" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Seguridad y Gestión de Accesos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-base-de-datos-y-almacenamiento" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Base de Datos y Almacenamiento
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-orquestacion-integral-opcional" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Orquestación Integral (Opcional)
+      5. Deduplicar y fusionar 🔄
     </span>
   </a>
   
@@ -864,38 +909,137 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flujo-de-trabajo-propuesto" class="md-nav__link">
+  <a href="#paso-3-identificar-que-dispara-cada-evento" class="md-nav__link">
     <span class="md-ellipsis">
-      Flujo de Trabajo Propuesto
+      Paso 3 — Identificar qué dispara cada evento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 3 — Identificar qué dispara cada evento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dinamica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dinámica 👣
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#beneficios-de-la-implementacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Beneficios de la Implementación
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#paso-4-detectar-agregados-y-limites-transaccionales" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusión
+      Paso 4 — Detectar Agregados y límites transaccionales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 4 — Detectar Agregados y límites transaccionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agrupacion-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agrupación visual 🖼
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#proximos-pasos" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#preguntas-clave" class="md-nav__link">
     <span class="md-ellipsis">
-      Próximos Pasos
+      Preguntas clave ❓
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chequear-invariantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chequear invariantes 🛡
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refinar-fronteras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refinar fronteras 🪄
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-5-profundizar-en-politicas-y-reglas-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 5 — Profundizar en Políticas y reglas de negocio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 5 — Profundizar en Políticas y reglas de negocio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clasificar-post-its-morados" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Clasificar post-its morados 🎭
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-anotar-disparadores-y-efectos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Anotar disparadores y efectos 🖇
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-revisar-side-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Revisar side-effects 🌐
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-enumerar-reglas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Enumerar reglas clave 📜
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-definir-prioridades" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Definir prioridades ⭐
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -918,79 +1062,193 @@
   
 
 
-<h1 id="propuesta-del-area-de-sistemas-para-el-desarrollo-y-despliegue-de-aplicaciones-on-premise">Propuesta del Área de Sistemas para el Desarrollo y Despliegue de Aplicaciones On-Premise</h1>
-<h2 id="introduccion">Introducción</h2>
-<p>Con el objetivo de modernizar y optimizar el desarrollo, despliegue y operación de aplicaciones dentro de nuestra organización, presentamos una propuesta integral basada en herramientas y plataformas tecnológicas. Esta propuesta está diseñada para garantizar la eficiencia, la seguridad y la escalabilidad de las soluciones que se ejecutan en nuestra infraestructura on-premise.</p>
-<h2 id="objetivos">Objetivos</h2>
+<h1 id="guia-de-event-storming">Guía de <strong>Event Storming</strong></h1>
+<hr />
+<h2 id="paso-1-recoleccion-de-eventos-de-dominio-big-picture">Paso 1 — Recolección de <strong>Eventos de Dominio</strong> (Big Picture)</h2>
+<table>
+<thead>
+<tr>
+<th>🎯</th>
+<th>Regla</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟧 <strong>Post-its naranjas</strong></td>
+<td>Un solo color por ronda</td>
+<td>Evita distracciones</td>
+</tr>
+<tr>
+<td>📝 <strong>Un evento por nota</strong></td>
+<td>Redactado en <strong>pasado</strong> <br>«Lote recibido», «Muestra analizada»</td>
+<td>Representa <strong>hechos ya ocurridos</strong></td>
+</tr>
+<tr>
+<td>🌧 <strong>Lluvia de ideas</strong></td>
+<td>Escribe <strong>todo</strong> sin filtrar</td>
+<td>Sin juzgar corrección ni redundancia</td>
+</tr>
+<tr>
+<td>🕒 <strong>Orden cronológico</strong></td>
+<td>Coloca cada post-it según el momento real</td>
+<td>Construye el <em>mapa inicial</em> del flujo</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Resultado</strong><br />
+Un tablero con la línea temporal completa listo para depurar, agrupar y detectar huecos.</p>
+</blockquote>
+<hr />
+<h2 id="paso-2-depurar-y-alinear-los-eventos-de-dominio">Paso 2 — Depurar y alinear los <strong>Eventos de Dominio</strong></h2>
+<h3 id="1-lectura-storytelling">1. Lectura &amp; Storytelling 📖</h3>
+<ul>
+<li>Recorre la cinta de <strong>izquierda a derecha</strong>.  </li>
+<li>Quien pegó cada post-it <strong>lo lee en voz alta</strong> y explica su relevancia.  </li>
+<li>Fomenta <strong>preguntas rápidas</strong> para aclarar contexto.</li>
+</ul>
+<h3 id="2-chequeo-sintactico">2. Chequeo sintáctico ✔️</h3>
+<ul>
+<li>¿Verbo en <strong>pasado</strong>?  </li>
+<li>¿Nombre de <strong>negocio</strong> claro (no términos técnicos como «registro DB»)?  </li>
+<li>Si el evento es solo técnico, márcalo como 🏷️ <strong>tech</strong> y déjalo aparte.</li>
+</ul>
+<h3 id="3-consolidacion-de-vocabulario">3. Consolidación de vocabulario 🗂</h3>
+<ul>
+<li>Detecta <strong>sinónimos</strong> → elige 1 término oficial.  </li>
+<li>Si un término describe cosas distintas, renómbralos y añade descriptor<br />
+<code>LoteRechazado_QC</code> vs <code>LoteRechazado_Lab</code>.</li>
+</ul>
+<h3 id="4-correccion-de-la-linea-temporal">4. Corrección de la línea temporal ⏱</h3>
+<ul>
+<li>Mueve post-its hasta que <strong>todos</strong> concuerden.  </li>
+<li>Inserta eventos faltantes (naranja) si ves huecos.  </li>
+<li>Marca dudas con 🟥 <strong>post-it rojo</strong>.</li>
+</ul>
+<h3 id="5-deduplicar-y-fusionar">5. Deduplicar y fusionar 🔄</h3>
+<ul>
+<li>Elimina eventos <strong>idénticos</strong> repetidos.  </li>
+<li>Combina eventos adyacentes con distinto nivel de detalle.</li>
+</ul>
+<blockquote>
+<p><strong>Resultado</strong><br />
+- <strong>Línea</strong> de eventos limpia y consensuada.<br />
+- <strong>Glosario</strong> común en el borde del tablero.<br />
+- <strong>Preguntas abiertas</strong> señaladas en rojo.</p>
+</blockquote>
+<hr />
+<h2 id="paso-3-identificar-que-dispara-cada-evento">Paso 3 — Identificar <strong>qué dispara</strong> cada evento</h2>
+<table>
+<thead>
+<tr>
+<th>Causa</th>
+<th>📌 Post-it</th>
+<th>Preguntas guía</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Acción de usuario</strong></td>
+<td>🟨 Comando</td>
+<td>¿Qué hizo la persona? ¿En qué pantalla/API?</td>
+<td><code>RegistrarDescargaDeLeche</code></td>
+</tr>
+<tr>
+<td><strong>Sistema externo</strong></td>
+<td>🟦 Actor externo</td>
+<td>¿Qué servicio/proveedor notificó?</td>
+<td>IoT ➜ <code>SensorTempReportado</code></td>
+</tr>
+<tr>
+<td><strong>Tiempo / Job</strong></td>
+<td>🟪 Proceso de negocio</td>
+<td>¿Regla temporal (“cada 24 h”)?</td>
+<td><code>CitaDeProductorVencida</code></td>
+</tr>
+<tr>
+<td><strong>Otro evento</strong></td>
+<td>🟪 Política / Reacción</td>
+<td>¿Qué evento anterior lo causó?</td>
+<td><code>MuestraAnalizada ➜ LoteRechazado</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="dinamica">Dinámica 👣</h3>
 <ol>
-<li>Implementar un ecosistema que permita un desarrollo ágil y colaborativo.</li>
-<li>Automatizar tareas repetitivas y minimizar errores humanos.</li>
-<li>Garantizar la consistencia en los entornos de desarrollo, pruebas y producción.</li>
-<li>Monitorear y gestionar de manera efectiva las aplicaciones y la infraestructura.</li>
-<li>Asegurar la protección de datos, credenciales y accesos.</li>
+<li>Recorre la línea de eventos <strong>depurada</strong>.  </li>
+<li>Para cada uno, pregunta: <strong>“¿Qué lo disparó?”</strong>  </li>
+<li>Coloca el post-it de causa justo <strong>antes</strong> del evento.  </li>
+<li>Conecta causa ➜ evento con <strong>flecha fina</strong>.  </li>
+<li>Sin causa clara → 🟥 “¿Quién dispara esto?” y continúa.</li>
 </ol>
-<h2 id="propuesta-tecnologica">Propuesta Tecnológica</h2>
-<p>A continuación, se detallan las herramientas y plataformas propuestas según las necesidades específicas del área de sistemas:</p>
-<h3 id="1-desarrollo-y-colaboracion">1. Desarrollo y Colaboración</h3>
+<blockquote>
+<p>💡 <strong>Tip</strong><br />
+Cadena “Evento A ➜ Política ➜ Evento B” ⇒ anota la <strong>política</strong> en morado; más adelante decidirás su BC.</p>
+</blockquote>
+<hr />
+<h2 id="paso-4-detectar-agregados-y-limites-transaccionales">Paso 4 — Detectar <strong>Agregados</strong> y límites transaccionales</h2>
+<h3 id="agrupacion-visual">Agrupación visual 🖼</h3>
 <ul>
-<li><strong>Git</strong>: Sistema de control de versiones para gestionar el código fuente.</li>
-<li><strong>GitLab (o Bitbucket)</strong>: Plataforma para alojar repositorios de código, gestionar proyectos y habilitar integración continua (CI/CD). GitLab también permite su despliegue on-premise para mayor control.</li>
-<li><strong>IDEs</strong>: Recomendamos el uso de entornos de desarrollo como Visual Studio Code o IntelliJ IDEA para maximizar la productividad.</li>
+<li>Dibuja un <strong>rectángulo tenue</strong> alrededor de post-its que comparten el mismo objeto (lote, tanque…).  </li>
+<li>Usa 🟩 <strong>verde</strong> para nombrar el agregado: <em>Tank</em>, <em>MilkReception</em>, <em>Sample</em>.</li>
 </ul>
-<h3 id="2-contenerizacion-y-virtualizacion">2. Contenerización y Virtualización</h3>
+<h3 id="preguntas-clave">Preguntas clave ❓</h3>
 <ul>
-<li><strong>Docker</strong>: Solución para contenerizar aplicaciones, garantizando consistencia entre entornos.</li>
-<li><strong>Kubernetes (K8s)</strong>: Plataforma de orquestación de contenedores para gestionar aplicaciones distribuidas, escalabilidad y alta disponibilidad.</li>
+<li>¿Qué datos deben permanecer <strong>consistentes</strong> en la misma transacción?  </li>
+<li>Si ocurren dos comandos simultáneos, ¿cuál <strong>bloquea</strong> a cuál?  </li>
+<li>¿Qué entidad <strong>identifica</strong> de forma única al grupo?</li>
 </ul>
-<h3 id="3-automatizacion-y-despliegue">3. Automatización y Despliegue</h3>
+<h3 id="chequear-invariantes">Chequear invariantes 🛡</h3>
 <ul>
-<li><strong>Jenkins</strong>: Herramienta para automatizar pruebas, integración y despliegue continuo. Alternativamente, se podría usar GitLab CI/CD integrado.</li>
-<li><strong>Ansible</strong> o <strong>Terraform</strong>: Para la configuración y gestión de infraestructura de manera automatizada y reproducible.</li>
+<li>Lista reglas duras debajo:  </li>
+<li>“El volumen nunca puede ser negativo”.  </li>
+<li>“Un lote rechazado no vuelve a ‘Aceptado’”.  </li>
+<li>Si una regla involucra <strong>dos agregados</strong>, marca 🟥 → podría requerir <strong>saga</strong>.</li>
 </ul>
-<h3 id="4-monitoreo-y-analisis">4. Monitoreo y Análisis</h3>
+<h3 id="refinar-fronteras">Refinar fronteras 🪄</h3>
 <ul>
-<li><strong>Prometheus y Grafana</strong>: Prometheus recolecta métricas de rendimiento y Grafana proporciona tableros visuales para su análisis.</li>
-<li><strong>ELK Stack (ElasticSearch, Logstash, Kibana)</strong>: Para la gestión y análisis de registros (logs) de las aplicaciones y servidores.</li>
+<li><strong>Divide</strong> rectángulos si no comparten invariantes.  </li>
+<li><strong>Fusiona</strong> si todos los comandos necesitan la misma consistencia.</li>
 </ul>
-<h3 id="5-seguridad-y-gestion-de-accesos">5. Seguridad y Gestión de Accesos</h3>
+<blockquote>
+<p><strong>Resultado</strong><br />
+- Mapa con <strong>3–7</strong> agregados bien nombrados.<br />
+- Invariantes visibles que guían entidades y repositorios.</p>
+</blockquote>
+<hr />
+<h2 id="paso-5-profundizar-en-politicas-y-reglas-de-negocio">Paso 5 — Profundizar en <strong>Políticas</strong> y reglas de negocio</h2>
+<h3 id="1-clasificar-post-its-morados">1. Clasificar post-its morados 🎭</h3>
 <ul>
-<li><strong>Vault (HashiCorp)</strong>: Solución para el almacenamiento y gestión segura de credenciales, claves de cifrado y secretos.</li>
-<li><strong>Keycloak</strong>: Herramienta de gestión de identidades para autenticar usuarios, manejar permisos y habilitar Single Sign-On (SSO).</li>
+<li><strong>Política sincrónica</strong> (command handler) → dentro de la transacción.  </li>
+<li><strong>Política asíncrona</strong> (event handler / saga) → tras el commit, tolera <em>eventual consistency</em>.</li>
 </ul>
-<h3 id="6-base-de-datos-y-almacenamiento">6. Base de Datos y Almacenamiento</h3>
+<h3 id="2-anotar-disparadores-y-efectos">2. Anotar disparadores y efectos 🖇</h3>
+<p>Evento ──▶ Política ──▶ Comando / Evento nuevo</p>
+<p><em>Ejemplo</em><br />
+<code>MuestraAnalizada</code> ⟶ <em>(política asíncrona)</em> <strong>DeterminarEstadoDeLote</strong> <em>(comando)</em></p>
+<h3 id="3-revisar-side-effects">3. Revisar side-effects 🌐</h3>
 <ul>
-<li><strong>Bases de Datos</strong>: Uso de PostgreSQL, MySQL o MongoDB según los requisitos de las aplicaciones.</li>
-<li><strong>MinIO</strong>: Solución de almacenamiento compatible con S3 para datos estructurados y no estructurados.</li>
+<li>¿Invoca <strong>API externas</strong>? Marca 🟦 “External Call”.  </li>
+<li>¿Modifica más de un agregado? → considera <strong>saga/orquestador</strong>.</li>
 </ul>
-<h3 id="7-orquestacion-integral-opcional">7. Orquestación Integral (Opcional)</h3>
+<h3 id="4-enumerar-reglas-clave">4. Enumerar reglas clave 📜</h3>
 <ul>
-<li><strong>OpenShift</strong>: Plataforma empresarial basada en Kubernetes que ofrece herramientas integradas para despliegue, seguridad, monitoreo y CI/CD. Recomendado para empresas que buscan una solución integral.</li>
+<li>Usa post-it gris para reglas complejas:<br />
+  “Si la acidez &gt; X <strong>y</strong> temperatura &gt; Y → rechazar lote”.</li>
 </ul>
-<h2 id="flujo-de-trabajo-propuesto">Flujo de Trabajo Propuesto</h2>
-<ol>
-<li><strong>Desarrollo</strong>: Los desarrolladores escriben y prueban código en sus IDEs, gestionándolo con GitLab.</li>
-<li><strong>Pruebas y Empaquetado</strong>: Jenkins o GitLab CI/CD ejecutan pruebas automáticas y generan contenedores Docker.</li>
-<li><strong>Despliegue</strong>: Los contenedores se despliegan en Kubernetes, que gestiona su distribución y disponibilidad.</li>
-<li><strong>Monitoreo</strong>: Prometheus y Grafana supervisan el rendimiento, mientras que ELK Stack analiza registros.</li>
-<li><strong>Seguridad</strong>: Vault y Keycloak aseguran credenciales y controlan accesos.</li>
-</ol>
-<h2 id="beneficios-de-la-implementacion">Beneficios de la Implementación</h2>
+<h3 id="5-definir-prioridades">5. Definir prioridades ⭐</h3>
 <ul>
-<li><strong>Eficiencia</strong>: Reducción de tiempo en tareas repetitivas mediante la automatización.</li>
-<li><strong>Consistencia</strong>: Las aplicaciones funcionarán igual en todos los entornos gracias a Docker.</li>
-<li><strong>Escalabilidad</strong>: Kubernetes permite gestionar aplicaciones que crecen con la demanda.</li>
-<li><strong>Visibilidad</strong>: Monitoreo en tiempo real y análisis de registros para una mejor toma de decisiones.</li>
-<li><strong>Seguridad</strong>: Gestión centralizada de accesos y protección de información sensible.</li>
+<li>Marca con ⭐ las políticas <strong>críticas</strong> para el MVP.  </li>
+<li>Posponer o externalizar las menos críticas.</li>
 </ul>
-<h2 id="conclusion">Conclusión</h2>
-<p>Esta propuesta proporciona las bases para una infraestructura moderna, segura y escalable en la que nuestra empresa pueda desarrollar y operar aplicaciones con altos estándares de calidad. Solicitamos la aprobación para implementar este ecosistema y así impulsar la eficiencia y la innovación dentro del área de sistemas.</p>
-<h2 id="proximos-pasos">Próximos Pasos</h2>
-<ol>
-<li>Aprobación de la propuesta.</li>
-<li>Planificación detallada de la implementación.</li>
-<li>Capacitar al equipo de sistemas en las herramientas seleccionadas.</li>
-<li>Despliegue progresivo y pruebas iniciales del ecosistema.</li>
-</ol>
+<blockquote>
+<p><strong>Resultado</strong><br />
+- Cadena clara <strong>evento ➜ política ➜ comando</strong> en cada flujo.<br />
+- Lista priorizada de <strong>reglas</strong> a codificar e <strong>integraciones</strong> externas.</p>
+</blockquote>
+<hr />
 
 
 
