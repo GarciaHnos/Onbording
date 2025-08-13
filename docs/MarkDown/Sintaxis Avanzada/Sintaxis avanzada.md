@@ -1,0 +1,85 @@
+# Sintaxis avanzada de Markdow
+
+Además de lo básico, Markdown ofrece funciones más avanzadas que ayudan a organizar y enriquecer los documentos:
+
+## Tablas
+Permiten organizar datos en filas y columnas con una sintaxis sencilla:
+
+| Columna 1 | Columna 2 |
+| --------- | --------- |
+| Dato 1    | Dato 2    |
+| Dato 3    | Dato 4    |
+
+    | Columna 1 | Columna 2 |
+    | --------- | --------- |
+    | Dato 1    | Dato 2    |
+    | Dato 3    | Dato 4    |
+
+---
+## Diagramas de flujo (Mermaid)
+Algunos motores de Markdown soportan Mermaid, que permite crear diagramas usando código:
+
+```mermaid
+flowchart TD
+    A[Inicio] --> B{¿Condición?}
+    B -->|Sí| C[Proceso 1]
+    B -->|No| D[Proceso 2]
+    C --> E[Fin]
+    D --> E[Fin]
+```
+    ```mermaid
+    flowchart TD
+        A[Inicio] --> B{¿Condición?}
+        B -->|Sí| C[Proceso 1]
+        B -->|No| D[Proceso 2]
+        C --> E[Fin]
+        D --> E[Fin]
+    ```
+
+---
+
+## Listas anidadas
+Para crear sublistas dentro de una lista principal, simplemente indentás con espacios o tabuladores:
+
+- Punto 1
+  - Subpunto 1.1
+  - Subpunto 1.2
+- Punto 2
+
+```
+- Punto 1
+  - Subpunto 1.1
+  - Subpunto 1.2
+- Punto 2
+```
+
+---
+
+## Listas de tareas (Checklist)
+Markdown permite crear listas con casillas para marcar tareas hechas o pendientes:
+
+- [x] Tarea completada
+- [ ] Tarea pendiente
+
+```
+- [x] Tarea completada
+- [ ] Tarea pendiente
+```
+
+---
+
+## Bloques de cita
+
+Para resaltar textos, citas o notas, se usa el símbolo > al inicio de la línea:
+
+>Esto es una cita o nota importante.
+
+```
+>Esto es una cita o nota importante.
+```
+
+
+
+
+
+
