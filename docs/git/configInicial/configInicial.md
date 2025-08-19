@@ -5,6 +5,7 @@ Recomendamos utilizar Git Bash para manejar Git desde la consola. Para acceder a
 1. Instala Git desde su [página oficial](https://git-scm.com/).
 2. Una vez instalado, busca "Git Bash" en tu sistema operativo y ejecútalo.
 3. Usa los comandos que se mencionaran a continuación directamente en la consola de Git Bash.
+![Abrir Git Bash](./Gif/Grabación-de-pantalla-2025-08-06-104353.gif)
 
 ---
 Una vez instalado Git, es importante configurarlo para trabajar correctamente.
