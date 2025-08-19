@@ -37,6 +37,75 @@ flowchart TD
     ```
 
 ---
+## Diagrama de secuencia (md)
+
+
+```mermaid
+sequenceDiagram
+    participant Cliente
+    participant Servidor
+    Cliente->>Servidor: Petición de login
+    Servidor-->>Cliente: Respuesta de autenticación
+```
+
+<pre>
+
+    ```mermaid
+    sequenceDiagram
+        participant Cliente
+        participant Servidor
+        Cliente->>Servidor: Petición de login
+        Servidor-->>Cliente: Respuesta de autenticación
+    ```
+</pre>
+
+# Diagrama de Gantt
+
+Este es un ejemplo de un diagrama de Gantt para un proyecto de desarrollo de software.
+
+```mermaid
+gantt
+    title Cronograma del Proyecto de App
+    dateFormat  YYYY-MM-DD
+
+    section Planificación
+    Análisis de requisitos      :done,    des1, 2025-08-19, 7d
+    Diseño de la interfaz      :         des2, after des1, 5d
+
+    section Desarrollo
+    Base de datos               :         dev1, 2025-08-26, 10d
+    Desarrollo del backend      :         dev2, after dev1, 15d
+    Desarrollo del frontend     :         dev3, after dev2, 10d
+
+    section Pruebas y Lanzamiento
+    Pruebas de calidad          :         test1, after dev3, 5d
+    Lanzamiento oficial         :         launch1, after test1, 3d
+```
+
+<pre>
+```mermaid
+gantt
+    title Cronograma del Proyecto de App
+    dateFormat  YYYY-MM-DD
+
+    section Planificación
+    Análisis de requisitos      :done,    des1, 2025-08-19, 7d
+    Diseño de la interfaz      :         des2, after des1, 5d
+
+    section Desarrollo
+    Base de datos               :         dev1, 2025-08-26, 10d
+    Desarrollo del backend      :         dev2, after dev1, 15d
+    Desarrollo del frontend     :         dev3, after dev2, 10d
+
+    section Pruebas y Lanzamiento
+    Pruebas de calidad          :         test1, after dev3, 5d
+    Lanzamiento oficial         :         launch1, after test1, 3d
+```
+</pre>
+
+
+
+
 
 ## Listas anidadas
 Para crear sublistas dentro de una lista principal, simplemente indentás con espacios o tabuladores:
