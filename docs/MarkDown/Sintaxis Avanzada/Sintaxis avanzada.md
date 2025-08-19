@@ -16,6 +16,17 @@ Permiten organizar datos en filas y columnas con una sintaxis sencilla:
     | Dato 3    | Dato 4    |
 
 ---
+
+## Alertas 
+
+para agregar una alerta, debe usarse una línea blockquote especial que especifique el tipo de alerta, seguida de la información de alerta en un blockquote estándar. Existen  cuatro tipos de alertas.
+
+!!! NOTE 
+!!! TIP
+!!! WARNING
+!!! CAUTION
+
+---
 ## Diagramas de flujo (Mermaid)
 Algunos motores de Markdown soportan Mermaid, que permite crear diagramas usando código:
 
@@ -128,7 +139,7 @@ Para crear sublistas dentro de una lista principal, simplemente indentás con es
 Markdown permite crear listas con casillas para marcar tareas hechas o pendientes:
 
 - [x] Tarea completada
-- [ ] Tarea pendiente
+- [x] Tarea pendiente
 
 ```
 - [x] Tarea completada
@@ -147,8 +158,13 @@ Para resaltar textos, citas o notas, se usa el símbolo > al inicio de la línea
 >Esto es una cita o nota importante.
 ```
 
+---
 
 
+
+
+!!! NOTE
+      Para que estos elementos avanzados funcionen (tablas, diagramas, listas de tareas, etc.), necesitas tener instalada la extensión  **Markdown Preview Enhanced** for Visual Studio Code. Sin ellas, solo verás texto plano en la vista previa.
 
 
 
