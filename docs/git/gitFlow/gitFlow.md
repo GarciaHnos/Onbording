@@ -56,6 +56,15 @@ Este flujo describe las buenas prácticas al trabajar con Git y GitHub, desde la
    git checkout feature/<id-ticketJira>
    git merge develop
 ```
+- Agregar Comentarios en un Merge con Vim
+Cuando hacés un merge que requiere commit:
+
+```bash
+Merge branch 'feature/ABC-123' into develop
+- Comentario
+```
+- Para guardar y salir: escribí :wq y presioná Enter.
+
 
 - Resuelve conflictos si es necesario, luego realiza un commit:
 ```bash
