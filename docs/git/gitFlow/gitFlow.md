@@ -42,7 +42,7 @@ Este flujo describe las buenas prácticas al trabajar con Git y GitHub, desde la
 ```
 - Repite este paso hasta completar la funcionalidad.
 
-### 3. Actualizar la Rama `feature` con `develop`
+### 3. Integrar la Rama `feacture` en `develop`
 
 - Asegúrate de que la rama `develop` tenga los últimos cambios:
 
@@ -51,10 +51,9 @@ Este flujo describe las buenas prácticas al trabajar con Git y GitHub, desde la
    git pull origin develop
 ```
 
-- Cambia a la rama `feature` y realiza un merge de `develop` para mantenerla actualizada:
+fusionar la rama `feacture` en `develop`:
 ```bash
-   git checkout feature/<id-ticketJira>
-   git merge develop
+   git merge feature/<id-ticketJira>
 ```
 
 - Resuelve conflictos si es necesario, luego realiza un commit:
@@ -66,13 +65,13 @@ Este flujo describe las buenas prácticas al trabajar con Git y GitHub, desde la
 ### 4. Subir la Rama al Repositorio Remoto
 Sube los cambios de tu rama `feature` al repositorio remoto:
 ```bash
-git push origin feature/<id-ticketJira>
+git push origin develop 
 ```
 
 ### 5. Crear un Pull Request en GitHub
 - Accede al repositorio en GitHub.
 
-- Crea un Pull Request (PR) desde la rama `feature/<id-ticketJira>` hacia la rama `develop`.
+- Crea un Pull Request (PR) desde la rama `develop` hacia la rama `feacture/<id-ticketJira>`.
 
 - Asegúrate de incluir una descripción detallada del PR:
    - Qué funcionalidad añade.
@@ -84,10 +83,10 @@ git push origin feature/<id-ticketJira>
 ### 6. Revisar y Fusionar el Pull Request
 - Los revisores deben validar los cambios y aprobar el PR.
 
-- Antes de fusionar, asegúrate de actualizar la rama `feature` con los últimos cambios de `develop`:
+- Antes de fusionar, asegúrate de actualizar la rama `develop` con los últimos cambios de `feacture`:
 ```bash
-   git checkout feature/<id-ticketJira>
-   git merge develop
+   git checkout  develop
+   git merge feature/<id-ticketJira>
 ```
 - Una vez actualizado, los revisores pueden proceder a fusionar el PR en `develop`.
 
