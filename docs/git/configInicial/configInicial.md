@@ -44,3 +44,17 @@ git config --list
   node_modules/
   .env
   ```
+
+
+---
+
+##### video explicativo Git y Git Hub
+
+<iframe width="560" height="315"
+        src="https://www.youtube.com/embed/trjavYM5LTg"
+        frameborder="0"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+</iframe>
+
+

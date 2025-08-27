@@ -1,15 +1,77 @@
 # Flujo de Trabajo Diario con Git y GitHub
 
-## Introducción
+## Introducción 
 Este flujo describe las buenas prácticas al trabajar con Git y GitHub, desde la creación de una rama `feature` para desarrollar una nueva funcionalidad, hasta la creación de un pull request para fusionar cambios en producción. Los ambientes definidos son:
 
-- **`main`:** Representa el ambiente productivo. Los cambios aquí deben estar completamente probados y listos para desplegar.
+- **`main`:** Representa el ambiente productivos. Los cambios aquí deben estar completamente probados y listos para desplegar.
 - **`hotfix`:** Usada para resolver errores críticos detectados en producción.
 - **`release`:** Rama utilizada para preparar una versión para su despliegue. Permite realizar pruebas finales antes de integrarla en `main`.
 - **`develop`:** Contiene el código en desarrollo que aún no está listo para producción. Aquí se integran las ramas `feature`.
 - **`feature/<id-jira>`:** Usada para desarrollar nuevas funcionalidades. El nombre de la rama debe incluir el ID del ticket de Jira para facilitar el seguimiento.
 
 ---
+
+## Personal Access Token (PAT)
+
+Un PAT es una clave segura y específica para tu entorno de desarrollo, que te permite autenticarte sin exponer tu contraseña principal. Puedes limitarle los permisos (por ejemplo, solo para leer o escribir en repositorios) y establecer una fecha de caducidad, lo que lo hace mucho más seguro que tu contraseña.
+
+## Cómo agregar el PAT a Git
+
+La primera vez que realices una operación de Git que necesite conectarse al repositorio remoto desde Visual Studio Code (como un git pull, git push o git clone), se te pedirá que te autentiques.
+
+1. Genera tu PAT: Primero, ve a la configuración de tu cuenta en la web (GitHub, GitLab, etc.) y crea un nuevo token.
+
+2. Copia el token: Asegúrate de copiar el token en ese momento, ya que no podrás verlo de nuevo.
+
+3. Pega el token: Cuando Visual Studio Code te pida la contraseña para autenticarte, en lugar de tu contraseña principal, pega el Personal Access Token.
+
+Una vez hecho esto, el gestor de credenciales de Git almacenará el token de forma segura en tu sistema, y no necesitarás volver a ingresarlo para futuras interacciones.
+
+
+#### Para configurar un Personal Access Token (PAT) en GitHub, sigue estos pasos:
+
+1. Accede a la Configuración de tu Cuenta
+Inicia sesión en tu cuenta de GitHub.
+
+-  Haz clic en tu foto de perfil en la esquina superior derecha de la página.
+
+- En el menú desplegable, selecciona Settings (Configuración).
+
+2. Ve a la Sección de Tokens
+En la barra lateral izquierda, busca y haz clic en Developer settings (Configuración de desarrollador).
+
+- En el nuevo menú lateral, selecciona Personal access tokens (Tokens de acceso personal).
+
+- Luego, haz clic en Tokens (classic).
+
+3. Genera un Nuevo Token
+Haz clic en el botón Generate new token (classic) (Generar nuevo token (clásico)).
+
+- Te pedirá que vuelvas a ingresar tu contraseña para confirmar tu identidad.
+
+- Ahora, completa los siguientes campos:
+
+- Note: Dale un nombre descriptivo a tu token, por ejemplo, "VS Code - Mi PC".
+
+- Expiration: Elige una fecha de vencimiento. Te recomiendo una duración de 30 o 90 días por seguridad. Si expira, simplemente tendrás que generar uno nuevo.
+
+- Select scopes: Aquí, defines los permisos del token. Para el uso común con Git, activa la casilla de repo para tener acceso completo a tus repositorios.
+
+4. Guarda y Copia el Token
+Haz clic en el botón verde Generate token (Generar token) al final de la página.
+
+!!! TIP  En la siguiente pantalla, se mostrará el token por única vez. Cópialo de inmediato y guárdalo en un lugar seguro (como un gestor de contraseñas) o pégalo directamente en Visual Studio Code.
+
+
+Una vez que cierres esta página, ya no podrás ver el token. Si lo pierdes, tendrás que generar uno nuevo.
+
+
+
+
+
+
+
+
 
 ## Flujo de Trabajo
 
@@ -62,7 +124,10 @@ Cuando hacés un merge que requiere commit:
 Merge branch 'feature/ABC-123' into develop
 - Comentario
 ```
-- Para guardar y salir: escribí :wq y presioná Enter.
+
+- con  **y** podes agregar un comentario  y para salir **esc**
+
+- Para guardar y salir: escribí : **wq** y presioná Enter.
 
 
 - Resuelve conflictos si es necesario, luego realiza un commit:
@@ -131,6 +196,9 @@ git push origin develop
 ```
 
 ---
+
+
+
 
 ## Notas y Buenas Prácticas
 - **Actualización constante:** Antes de trabajar en una rama, asegúrate de sincronizarla con su rama base para evitar conflictos.

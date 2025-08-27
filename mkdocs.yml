@@ -41,3 +41,10 @@ theme:
         name: Switch to light mode
 markdown_extensions:
   - admonition 
+
+plugins:
+  - glightbox:
+      touch: true  # Habilita el soporte táctil para dispositivos móviles
+      zoom: true  # Habilita el zoom en las imágenes
+      autofocus: true # Habilita el foco automático al abrir
+      do_not_load: false # Para cargar el plugin en todas las páginas
