@@ -53,3 +53,10 @@ plugins:
       zoom: true  # Habilita el zoom en las imágenes
       autofocus: true # Habilita el foco automático al abrir
       do_not_load: false # Para cargar el plugin en todas las páginas
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
