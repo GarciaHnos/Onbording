@@ -26,7 +26,7 @@ jobs:                                             # Define los trabajos a ejecut
           pip install mkdocs                     # Instala MkDocs base
           pip install mkdocs-material            # Instala tema Material
           pip install mkdocs-awesome-pages-plugin # Instala plugin para páginas
-          # agregar acá más plugins si se usan 
+          pip install mkdocs-macros-plugin 
 
       - name: Build site                         # Paso 4: Construir el sitio
         run: mkdocs build --clean                # Genera el sitio en carpeta ./site/ (--clean borra build anterior)
