@@ -13,7 +13,12 @@ nav:
     - Git Flow: git/gitFlow/gitFlow.md
   - Draft: 
     - Relevamiento de Programas: draft/relevamientoProgramas/relevamientoProgramas.md
-  - MkDocs: mkDocs/mkDocs.md
+  - MkDocs:
+      - Introducción: mkDocs/MkDocs/Introduccion/introduccion-MkDocs.md
+      - Contribución: mkDocs/MkDocs/Contribucion/contribucion.md
+      - Navegación: mkDocs/MkDocs/Navegacion/navegacion.md
+      - Previsualización: mkDocs/MkDocs/Previsualización/previsualizacion.md
+      - Despliegue: mkDocs/MkDocs/Despliegue/despliegue.md   
   
 
 site_author: It
@@ -39,3 +44,10 @@ theme:
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to light mode
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
