@@ -116,7 +116,7 @@ flowchart LR
 
 ---
 
-```bash
+```yaml
 project/
 │
 ├── docs/                        # Documentación (carpeta principal)
