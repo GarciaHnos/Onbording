@@ -6,7 +6,7 @@ Este proyecto utiliza **MkDocs** para generar un sitio estático a partir de arc
 
 ## 📁 Estructura del proyecto
 
-```bash
+```yaml
 ├── docs/                    # Archivos fuente en Markdown
 ├── .github/
 │   └── workflows/
