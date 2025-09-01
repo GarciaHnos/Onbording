@@ -55,7 +55,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -146,46 +155,6 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Buscar">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Inicializando búsqueda
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
     
     
       <div class="md-header__source">
@@ -547,9 +516,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../mkDocs/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -558,7 +538,134 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            MkDocs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MkDocs/Introduccion/introduccion-MkDocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MkDocs/Contribucion/contribucion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contribución
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MkDocs/Navegacion/navegacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Navegación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MkDocs/Previsualizaci%C3%B3n/previsualizacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Previsualización
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MkDocs/Despliegue/despliegue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Despliegue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -662,20 +769,20 @@
 
   <h1>Deploy</h1>
 
-<pre><code class="language-markdown"># 🚀 Despliegue de Documentación con MkDocs + GitHub Pages
+<div class="highlight"><pre><span></span><code><span class="gh"># 🚀 Despliegue de Documentación con MkDocs + GitHub Pages</span>
 
-Este proyecto utiliza **MkDocs** para generar un sitio estático a partir de archivos Markdown, y **GitHub Pages** para publicar el contenido en la rama `gh-pages`.
+Este proyecto utiliza <span class="gs">**MkDocs**</span> para generar un sitio estático a partir de archivos Markdown, y <span class="gs">**GitHub Pages**</span> para publicar el contenido en la rama <span class="sb">`gh-pages`</span>.
 
 ---
 
-## 📁 Estructura del proyecto
+<span class="gu">## 📁 Estructura del proyecto</span>
 
 ```plaintext
 .
 ├── docs/           # Archivos fuente en Markdown
 ├── site/           # Carpeta generada automáticamente con los archivos estáticos
 ├── mkdocs.yml      # Configuración de MkDocs
-</code></pre>
+</code></pre></div>
 <hr />
 <h2 id="requisitos">⚙️ Requisitos</h2>
 <ul>
@@ -684,24 +791,24 @@ Este proyecto utiliza **MkDocs** para generar un sitio estático a partir de arc
 <li>Tener acceso de push al repositorio remoto</li>
 </ul>
 <p>Instalar MkDocs:</p>
-<pre><code class="language-bash">pip install mkdocs
-</code></pre>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>mkdocs
+</code></pre></div>
 <blockquote>
 <p>Si tenés múltiples versiones de Python, usá:</p>
-<p><code>bash
-py -3.12 -m pip install mkdocs</code></p>
+<div class="highlight"><pre><span></span><code>py<span class="w"> </span>-3.12<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>mkdocs
+</code></pre></div>
 </blockquote>
 <hr />
 <h2 id="build-del-sitio-estatico">🛠️ Build del sitio estático</h2>
 <p>Desde la raíz del proyecto, ejecutar:</p>
-<pre><code class="language-bash">py -3.12 -m mkdocs build
-</code></pre>
+<div class="highlight"><pre><span></span><code>py<span class="w"> </span>-3.12<span class="w"> </span>-m<span class="w"> </span>mkdocs<span class="w"> </span>build
+</code></pre></div>
 <p>Esto genera el contenido estático dentro de la carpeta <code>site/</code>.</p>
 <hr />
 <h2 id="despliegue-a-github-pages">🚀 Despliegue a GitHub Pages</h2>
 <p>Si es la primera vez o querés sobrescribir la rama <code>gh-pages</code>, usá:</p>
-<pre><code class="language-bash">git push origin `git subtree split --prefix site main`:gh-pages --force
-</code></pre>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span><span class="sb">`</span>git<span class="w"> </span>subtree<span class="w"> </span>split<span class="w"> </span>--prefix<span class="w"> </span>site<span class="w"> </span>main<span class="sb">`</span>:gh-pages<span class="w"> </span>--force
+</code></pre></div>
 <p>Este comando:</p>
 <ul>
 <li>Extrae la carpeta <code>site/</code> de la rama <code>main</code></li>
@@ -721,12 +828,12 @@ py -3.12 -m pip install mkdocs</code></p>
 <hr />
 <h2 id="tip-automatizar-con-script">💡 Tip: Automatizar con script</h2>
 <p>Podés crear un archivo <code>deploy.ps1</code> con:</p>
-<pre><code class="language-powershell">py -3.12 -m mkdocs build
-git push origin `git subtree split --prefix site main`:gh-pages --force
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">py</span> <span class="p">-</span><span class="n">3</span><span class="p">.</span><span class="n">12</span> <span class="n">-m</span> <span class="n">mkdocs</span> <span class="n">build</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">`</span><span class="n">git</span> <span class="n">subtree</span> <span class="n">split</span> <span class="p">-</span><span class="n">-prefix</span> <span class="n">site</span> <span class="n">main</span><span class="p">`:</span><span class="n">gh-pages</span> <span class="p">-</span><span class="n">-force</span>
+</code></pre></div>
 <p>Y luego correr:</p>
-<pre><code class="language-powershell">.\deploy.ps1
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">.\</span><span class="n">deploy</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div>
 <hr />
 <h2 id="notas">🧹 Notas</h2>
 <ul>
@@ -789,5 +896,7 @@ git push origin `git subtree split --prefix site main`:gh-pages --force
       <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

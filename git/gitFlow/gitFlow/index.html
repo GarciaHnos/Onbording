@@ -59,7 +59,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -150,46 +159,6 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Buscar">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Inicializando búsqueda
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
     
     
       <div class="md-header__source">
@@ -515,6 +484,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#personal-access-token-pat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personal Access Token (PAT)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-agregar-el-pat-a-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cómo agregar el PAT a Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cómo agregar el PAT a Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-configurar-un-personal-access-token-pat-en-github-sigue-estos-pasos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Para configurar un Personal Access Token (PAT) en GitHub, sigue estos pasos:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#flujo-de-trabajo" class="md-nav__link">
     <span class="md-ellipsis">
       Flujo de Trabajo
@@ -543,9 +545,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-actualizar-la-rama-feature-con-develop" class="md-nav__link">
+  <a href="#3-integrar-la-rama-feacture-en-develop" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Actualizar la Rama feature con develop
+      3. Integrar la Rama feacture en develop
     </span>
   </a>
   
@@ -700,9 +702,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../mkDocs/mkDocs/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -711,7 +724,134 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            MkDocs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mkDocs/MkDocs/Introduccion/introduccion-MkDocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mkDocs/MkDocs/Contribucion/contribucion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contribución
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mkDocs/MkDocs/Navegacion/navegacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Navegación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mkDocs/MkDocs/Previsualizaci%C3%B3n/previsualizacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Previsualización
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mkDocs/MkDocs/Despliegue/despliegue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Despliegue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -752,6 +892,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#personal-access-token-pat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personal Access Token (PAT)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-agregar-el-pat-a-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cómo agregar el PAT a Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cómo agregar el PAT a Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-configurar-un-personal-access-token-pat-en-github-sigue-estos-pasos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Para configurar un Personal Access Token (PAT) en GitHub, sigue estos pasos:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#flujo-de-trabajo" class="md-nav__link">
     <span class="md-ellipsis">
       Flujo de Trabajo
@@ -780,9 +953,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-actualizar-la-rama-feature-con-develop" class="md-nav__link">
+  <a href="#3-integrar-la-rama-feacture-en-develop" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Actualizar la Rama feature con develop
+      3. Integrar la Rama feacture en develop
     </span>
   </a>
   
@@ -870,80 +1043,144 @@
 <h2 id="introduccion">Introducción</h2>
 <p>Este flujo describe las buenas prácticas al trabajar con Git y GitHub, desde la creación de una rama <code>feature</code> para desarrollar una nueva funcionalidad, hasta la creación de un pull request para fusionar cambios en producción. Los ambientes definidos son:</p>
 <ul>
-<li><strong><code>main</code>:</strong> Representa el ambiente productivo. Los cambios aquí deben estar completamente probados y listos para desplegar.</li>
+<li><strong><code>main</code>:</strong> Representa el ambiente productivos. Los cambios aquí deben estar completamente probados y listos para desplegar.</li>
 <li><strong><code>hotfix</code>:</strong> Usada para resolver errores críticos detectados en producción.</li>
 <li><strong><code>release</code>:</strong> Rama utilizada para preparar una versión para su despliegue. Permite realizar pruebas finales antes de integrarla en <code>main</code>.</li>
 <li><strong><code>develop</code>:</strong> Contiene el código en desarrollo que aún no está listo para producción. Aquí se integran las ramas <code>feature</code>.</li>
 <li><strong><code>feature/&lt;id-jira&gt;</code>:</strong> Usada para desarrollar nuevas funcionalidades. El nombre de la rama debe incluir el ID del ticket de Jira para facilitar el seguimiento.</li>
 </ul>
 <hr />
+<h2 id="personal-access-token-pat">Personal Access Token (PAT)</h2>
+<p>Un PAT es una clave segura y específica para tu entorno de desarrollo, que te permite autenticarte sin exponer tu contraseña principal. Puedes limitarle los permisos (por ejemplo, solo para leer o escribir en repositorios) y establecer una fecha de caducidad, lo que lo hace mucho más seguro que tu contraseña.</p>
+<h2 id="como-agregar-el-pat-a-git">Cómo agregar el PAT a Git</h2>
+<p>La primera vez que realices una operación de Git que necesite conectarse al repositorio remoto desde Visual Studio Code (como un git pull, git push o git clone), se te pedirá que te autentiques.</p>
+<ol>
+<li>
+<p>Genera tu PAT: Primero, ve a la configuración de tu cuenta en la web (GitHub, GitLab, etc.) y crea un nuevo token.</p>
+</li>
+<li>
+<p>Copia el token: Asegúrate de copiar el token en ese momento, ya que no podrás verlo de nuevo.</p>
+</li>
+<li>
+<p>Pega el token: Cuando Visual Studio Code te pida la contraseña para autenticarte, en lugar de tu contraseña principal, pega el Personal Access Token.</p>
+</li>
+</ol>
+<p>Una vez hecho esto, el gestor de credenciales de Git almacenará el token de forma segura en tu sistema, y no necesitarás volver a ingresarlo para futuras interacciones.</p>
+<h4 id="para-configurar-un-personal-access-token-pat-en-github-sigue-estos-pasos">Para configurar un Personal Access Token (PAT) en GitHub, sigue estos pasos:</h4>
+<ol>
+<li>
+<p>Accede a la Configuración de tu Cuenta
+Inicia sesión en tu cuenta de GitHub.</p>
+</li>
+<li>
+<p>Haz clic en tu foto de perfil en la esquina superior derecha de la página.</p>
+</li>
+<li>
+<p>En el menú desplegable, selecciona Settings (Configuración).</p>
+</li>
+<li>
+<p>Ve a la Sección de Tokens
+En la barra lateral izquierda, busca y haz clic en Developer settings (Configuración de desarrollador).</p>
+</li>
+<li>
+<p>En el nuevo menú lateral, selecciona Personal access tokens (Tokens de acceso personal).</p>
+</li>
+<li>
+<p>Luego, haz clic en Tokens (classic).</p>
+</li>
+<li>
+<p>Genera un Nuevo Token
+Haz clic en el botón Generate new token (classic) (Generar nuevo token (clásico)).</p>
+</li>
+<li>
+<p>Te pedirá que vuelvas a ingresar tu contraseña para confirmar tu identidad.</p>
+</li>
+<li>
+<p>Ahora, completa los siguientes campos:</p>
+</li>
+<li>
+<p>Note: Dale un nombre descriptivo a tu token, por ejemplo, "VS Code - Mi PC".</p>
+</li>
+<li>
+<p>Expiration: Elige una fecha de vencimiento. Te recomiendo una duración de 30 o 90 días por seguridad. Si expira, simplemente tendrás que generar uno nuevo.</p>
+</li>
+<li>
+<p>Select scopes: Aquí, defines los permisos del token. Para el uso común con Git, activa la casilla de repo para tener acceso completo a tus repositorios.</p>
+</li>
+<li>
+<p>Guarda y Copia el Token
+Haz clic en el botón verde Generate token (Generar token) al final de la página.</p>
+</li>
+</ol>
+<p>!!! TIP  En la siguiente pantalla, se mostrará el token por única vez. Cópialo de inmediato y guárdalo en un lugar seguro (como un gestor de contraseñas) o pégalo directamente en Visual Studio Code.</p>
+<p>Una vez que cierres esta página, ya no podrás ver el token. Si lo pierdes, tendrás que generar uno nuevo.</p>
 <h2 id="flujo-de-trabajo">Flujo de Trabajo</h2>
 <h3 id="1-crear-una-rama-feature">1. Crear una Rama <code>feature</code></h3>
 <ul>
-<li>Asegúrate de estar en la rama <code>develop</code> (o la rama base según corresponda):</li>
-</ul>
-<pre><code class="language-bash">   git checkout develop
-   git pull origin develop
-</code></pre>
-<ul>
-<li>Crea y cambia a una nueva rama <code>feature</code>:</li>
-</ul>
-<pre><code class="language-bash">   git checkout -b feature/&lt;id-ticketJira&gt;
-</code></pre>
-<ul>
+<li>Asegúrate de estar en la rama <code>develop</code> (o la rama base según corresponda):
+<div class="highlight"><pre><span></span><code><span class="w">   </span>git<span class="w"> </span>checkout<span class="w"> </span>develop
+<span class="w">   </span>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>develop
+</code></pre></div></li>
+<li>Crea y cambia a una nueva rama <code>feature</code>:
+<div class="highlight"><pre><span></span><code><span class="w">   </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/&lt;id-ticketJira&gt;
+</code></pre></div></li>
 <li>Comienza a desarrollar la funcionalidad requerida.</li>
 </ul>
 <h3 id="2-realizar-cambios-y-commits">2. Realizar Cambios y Commits</h3>
 <ul>
-<li>Verifica los cambios realizados:</li>
-</ul>
-<pre><code class="language-bash">   git status
-</code></pre>
-<ul>
-<li>Selecciona los archivos para agregar al área de staging:</li>
-</ul>
-<pre><code class="language-bash">   git add archivo1 archivo2
-   # O de forma interactiva:
-   git add -i
-</code></pre>
-<ul>
-<li>Realiza un commit con una descripción clara:</li>
-</ul>
-<pre><code class="language-bash">   git commit -m &quot;[&lt;id-ticketJira&gt;] Implementación de nueva funcionalidad.&quot;
-</code></pre>
-<ul>
+<li>Verifica los cambios realizados:
+<div class="highlight"><pre><span></span><code><span class="w">   </span>git<span class="w"> </span>status
+</code></pre></div></li>
+<li>Selecciona los archivos para agregar al área de staging:
+<div class="highlight"><pre><span></span><code><span class="w">   </span>git<span class="w"> </span>add<span class="w"> </span>archivo1<span class="w"> </span>archivo2
+<span class="w">   </span><span class="c1"># O de forma interactiva:</span>
+<span class="w">   </span>git<span class="w"> </span>add<span class="w"> </span>-i
+</code></pre></div></li>
+<li>Realiza un commit con una descripción clara:
+<div class="highlight"><pre><span></span><code><span class="w">   </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;[&lt;id-ticketJira&gt;] Implementación de nueva funcionalidad.&quot;</span>
+</code></pre></div></li>
 <li>Repite este paso hasta completar la funcionalidad.</li>
 </ul>
-<h3 id="3-actualizar-la-rama-feature-con-develop">3. Actualizar la Rama <code>feature</code> con <code>develop</code></h3>
+<h3 id="3-integrar-la-rama-feacture-en-develop">3. Integrar la Rama <code>feacture</code> en <code>develop</code></h3>
 <ul>
 <li>Asegúrate de que la rama <code>develop</code> tenga los últimos cambios:</li>
 </ul>
-<pre><code class="language-bash">   git checkout develop
-   git pull origin develop
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="w">   </span>git<span class="w"> </span>checkout<span class="w"> </span>develop
+<span class="w">   </span>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>develop
+</code></pre></div>
+<p>fusionar la rama <code>feacture</code> en <code>develop</code>:
+<div class="highlight"><pre><span></span><code><span class="w">   </span>git<span class="w"> </span>merge<span class="w"> </span>feature/&lt;id-ticketJira&gt;
+</code></pre></div>
+- Agregar Comentarios en un Merge con Vim
+Cuando hacés un merge que requiere commit:</p>
+<div class="highlight"><pre><span></span><code>Merge<span class="w"> </span>branch<span class="w"> </span><span class="s1">&#39;feature/ABC-123&#39;</span><span class="w"> </span>into<span class="w"> </span>develop
+-<span class="w"> </span>Comentario
+</code></pre></div>
 <ul>
-<li>Cambia a la rama <code>feature</code> y realiza un merge de <code>develop</code> para mantenerla actualizada:</li>
+<li>
+<p>con  <strong>y</strong> podes agregar un comentario  y para salir <strong>esc</strong></p>
+</li>
+<li>
+<p>Para guardar y salir: escribí : <strong>wq</strong> y presioná Enter.</p>
+</li>
+<li>
+<p>Resuelve conflictos si es necesario, luego realiza un commit:
+<div class="highlight"><pre><span></span><code><span class="w">   </span>git<span class="w"> </span>add<span class="w"> </span>archivos_conflictivos
+<span class="w">   </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Resueltos conflictos entre develop y feature/&lt;id-ticketJira&gt;.&quot;</span>
+</code></pre></div></p>
+</li>
 </ul>
-<pre><code class="language-bash">   git checkout feature/&lt;id-ticketJira&gt;
-   git merge develop
-</code></pre>
-<ul>
-<li>Resuelve conflictos si es necesario, luego realiza un commit:</li>
-</ul>
-<pre><code class="language-bash">   git add archivos_conflictivos
-   git commit -m &quot;Resueltos conflictos entre develop y feature/&lt;id-ticketJira&gt;.&quot;
-</code></pre>
 <h3 id="4-subir-la-rama-al-repositorio-remoto">4. Subir la Rama al Repositorio Remoto</h3>
-<p>Sube los cambios de tu rama <code>feature</code> al repositorio remoto:</p>
-<pre><code class="language-bash">git push origin feature/&lt;id-ticketJira&gt;
-</code></pre>
+<p>Sube los cambios de tu rama <code>feature</code> al repositorio remoto:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>develop<span class="w"> </span>
+</code></pre></div></p>
 <h3 id="5-crear-un-pull-request-en-github">5. Crear un Pull Request en GitHub</h3>
 <ul>
 <li>
 <p>Accede al repositorio en GitHub.</p>
 </li>
 <li>
-<p>Crea un Pull Request (PR) desde la rama <code>feature/&lt;id-ticketJira&gt;</code> hacia la rama <code>develop</code>.</p>
+<p>Crea un Pull Request (PR) desde la rama <code>develop</code> hacia la rama <code>feacture/&lt;id-ticketJira&gt;</code>.</p>
 </li>
 <li>
 <p>Asegúrate de incluir una descripción detallada del PR:</p>
@@ -963,39 +1200,37 @@
 <p>Los revisores deben validar los cambios y aprobar el PR.</p>
 </li>
 <li>
-<p>Antes de fusionar, asegúrate de actualizar la rama <code>feature</code> con los últimos cambios de <code>develop</code>:</p>
+<p>Antes de fusionar, asegúrate de actualizar la rama <code>develop</code> con los últimos cambios de <code>feacture</code>:
+<div class="highlight"><pre><span></span><code><span class="w">   </span>git<span class="w"> </span>checkout<span class="w">  </span>develop
+<span class="w">   </span>git<span class="w"> </span>merge<span class="w"> </span>feature/&lt;id-ticketJira&gt;
+</code></pre></div></p>
 </li>
-</ul>
-<pre><code class="language-bash">   git checkout feature/&lt;id-ticketJira&gt;
-   git merge develop
-</code></pre>
-<ul>
 <li>Una vez actualizado, los revisores pueden proceder a fusionar el PR en <code>develop</code>.</li>
 </ul>
 <h3 id="7-crear-una-rama-release-cuando-proceda">7. Crear una Rama <code>release</code> (Cuando Proceda)</h3>
 <ul>
-<li>Si la funcionalidad está lista para pruebas finales, crea una rama <code>release</code> desde <code>develop</code>:</li>
-</ul>
-<pre><code class="language-bash">   git checkout develop
-   git pull origin develop
-   git checkout -b release/&lt;version&gt;
-</code></pre>
-<ul>
+<li>
+<p>Si la funcionalidad está lista para pruebas finales, crea una rama <code>release</code> desde <code>develop</code>:
+<div class="highlight"><pre><span></span><code><span class="w">   </span>git<span class="w"> </span>checkout<span class="w"> </span>develop
+<span class="w">   </span>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>develop
+<span class="w">   </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>release/&lt;version&gt;
+</code></pre></div></p>
+</li>
 <li>
 <p>Realiza pruebas finales en esta rama y aplica ajustes menores si es necesario.</p>
 </li>
 <li>
-<p>Una vez aprobada, fusiona la rama <code>release</code> en <code>main</code> y <code>develop</code>:</p>
+<p>Una vez aprobada, fusiona la rama <code>release</code> en <code>main</code> y <code>develop</code>:
+<div class="highlight"><pre><span></span><code><span class="w">   </span>git<span class="w"> </span>checkout<span class="w"> </span>main
+<span class="w">   </span>git<span class="w"> </span>merge<span class="w"> </span>release/&lt;version&gt;
+<span class="w">   </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+
+<span class="w">   </span>git<span class="w"> </span>checkout<span class="w"> </span>develop
+<span class="w">   </span>git<span class="w"> </span>merge<span class="w"> </span>release/&lt;version&gt;
+<span class="w">   </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>develop
+</code></pre></div></p>
 </li>
 </ul>
-<pre><code class="language-bash">   git checkout main
-   git merge release/&lt;version&gt;
-   git push origin main
-
-   git checkout develop
-   git merge release/&lt;version&gt;
-   git push origin develop
-</code></pre>
 <h3 id="8-integracion-final-en-main">8. Integración Final en <code>main</code></h3>
 <ul>
 <li>Cuando una versión esté lista para producción:</li>
@@ -1003,12 +1238,12 @@
 <p>Fusiona <code>release</code> en <code>main</code>.</p>
 </li>
 <li>
-<p>Elimina ramas temporales:</p>
+<p>Elimina ramas temporales:
+<div class="highlight"><pre><span></span><code><span class="w">   </span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature/&lt;id-ticketJira&gt;
+<span class="w">   </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>feature/&lt;id-ticketJira&gt;
+</code></pre></div></p>
 </li>
 </ul>
-<pre><code class="language-bash">   git branch -d feature/&lt;id-ticketJira&gt;
-   git push origin --delete feature/&lt;id-ticketJira&gt;
-</code></pre>
 <hr />
 <h2 id="notas-y-buenas-practicas">Notas y Buenas Prácticas</h2>
 <ul>
@@ -1072,5 +1307,7 @@
       <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
