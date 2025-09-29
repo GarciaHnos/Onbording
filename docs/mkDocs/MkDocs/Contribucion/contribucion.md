@@ -1,35 +1,48 @@
 # Guía de Contribución 🚀
 
-Todo proyecto mantiene su documentación en la carpeta **`docs/`**, organizada por áreas temáticas para facilitar la colaboración y la escalabilidad del conocimiento.
+Todo proyecto mantiene su documentación en la carpeta **`docs/`**, organizada por áreas temáticas para facilitar la colaboración y la escalabilidad del conocimiento.  
 La carpeta **`site/`** se genera automáticamente al momento de desplegar la documentación, por lo que **no debe editarse manualmente**.
 
 ---
+
 #### | **Principios de trabajo**
 
-**Estandarización:** cada sección está estructurada en subcarpetas, y cada una incluye al menos un archivo **`.md`** con la información relevante.
+!!! note "Estandarización"
+    <p style="font-size: 0.75rem; line-height:1.5;">
+    Cada sección está estructurada en subcarpetas, y cada una incluye al menos un archivo **`.md`** con la información relevante.
+    </p>
 
-**Escalabilidad:** podés crear nuevas carpetas o archivos siempre que respetes la convención de nombres (`introduccion.md`).
+!!! tip "Escalabilidad"
+    <p style="font-size: 0.75rem; line-height:1.5;">
+    Podés crear nuevas carpetas o archivos siempre que respetes la convención de nombres (`introduccion.md`).
+    </p>
 
-**Colaboración:** cada cambio debe realizarse en una **rama separada**, acompañado de un **`commit`** claro y un **`Pull Request`**.
+!!! Danger "Colaboración"
+    <p style="font-size:0.75rem; line-height:1.5;">
+    **Colaboración:** cada cambio debe realizarse en una **rama separada**, acompañado de un **`commit`** claro y un **`Pull Request`**.
+    </p>
 
---- 
+---
 
 #### | **Flujo recomendado**
 
 Seguir las prácticas de versionado documentadas en **`gitFlow`**.
 
-Mantener consistencia con las convenciones de **`git/configInicial/
-configInicial.md`**
-
+!!! note
+    <p style="font-size: 0.75rem; line-height:1.5;">
+    Mantener consistencia con las convenciones de **`git/configInicial/configInicial.md`**.
+    </p>
 Documentar cambios en la carpeta correspondiente, agregando o actualizando archivos **`.md`**.
 
 ---
 
 #### | **Importante**
 
-La carpeta **`docs/`** es el único lugar editable.
-
-La carpeta **`site/`** se genera al hacer el build y refleja lo que se verá en producción.
+!!! warning "Atención"
+    <p style="font-size: 0.75rem; line-height:1.5;">
+    La carpeta **`docs/`** es el único lugar editable.  
+    La carpeta **`site/`** se genera al hacer el build y refleja lo que se verá en producción.
+    </p>
 
 ---
 
