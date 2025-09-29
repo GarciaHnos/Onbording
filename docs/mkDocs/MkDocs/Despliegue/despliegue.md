@@ -1,4 +1,4 @@
-# 🚀Despliegue de Documentación con MkDocs + GitHub Pages + GitHub Actions
+# 🚀 Despliegue de Documentación con MkDocs + GitHub Pages + GitHub Actions
 
 Este proyecto utiliza **MkDocs** para generar un sitio estático a partir de archivos Markdown, **GitHub Actions** para la construcción automática, y **GitHub Pages** para publicar el contenido.
 
@@ -6,13 +6,14 @@ Este proyecto utiliza **MkDocs** para generar un sitio estático a partir de arc
 
 ## 📁 Estructura del proyecto
 
-```yaml
-├── docs/                    # Archivos fuente en Markdown
-├── .github/
-│   └── workflows/
-│       └── deploy.yml       # GitHub Action para deploy automático
-├── mkdocs.yml               # Configuración de MkDocs
-```
+!!! note "Archivos clave"
+    ```yaml
+    ├── docs/                    # Archivos fuente en Markdown
+    ├── .github/
+    │   └── workflows/
+    │       └── deploy.yml       # GitHub Action para deploy automático
+    ├── mkdocs.yml               # Configuración de MkDocs
+    ```
 
 ---
 
@@ -85,12 +86,15 @@ jobs:                                             # Define los trabajos a ejecut
 ---
 
 ## 🧪 Verificar
-**1.** En GitHub, ir a `Settings > Pages`
-**2.** Asegurarse que:
-* Branch: `gh-pages`
-* Carpeta: `/ (root)`
-3. Acceder al sitio en:
-`https://<nombre-usuario>.github.io/<nombre-repo>`
+!!! note ""
+    <p style="font-size: 0.75rem; line-height:1.5;">
+      **1.** En GitHub, ir a `Settings > Pages`<br>
+      **2.** Asegurarse que:
+      * Branch: `gh-pages`
+      * Carpeta: `/ (root)` <br>
+      **3.** Acceder al sitio en:
+      `https://<nombre-usuario>.github.io/<nombre-repo>`
+      </p>
 
 ---
 ```mermaid

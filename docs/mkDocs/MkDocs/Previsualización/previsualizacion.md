@@ -3,7 +3,7 @@
 Para poder visualizar en tiempo real los cambios en la documentación con MkDocs, se deben seguir estos pasos:
 
 
-### 1. Instalar Python
+!!! Success "1. Instalar Python"
 MkDocs funciona sobre Python, por lo que primero es necesario descargarlo desde la página oficial:  
 👉 [Página Oficial.](https://www.python.org/downloads/)
 
@@ -11,7 +11,7 @@ Durante la instalación, **activar la opción “Add Python to PATH”** para po
 
 ---
  
-### 2. Abrir Git Bash
+!!! Success "2. Abrir Git Bash"
 Una vez instalado Python, abrir **Git Bash** (o cualquier terminal).  
 Desde ahí se puede comprobar la instalación de Python ejecutando:
 
@@ -22,7 +22,7 @@ Te lanza la verción de python.
 
 ---
 
-### 3. Instalar MkDocs
+!!! Success "3. Instalar MkDocs"
 
 Escribe el siguiente comando para instalar MkDocs:
 
@@ -33,7 +33,7 @@ Se empezara a instalarse Mkdocs.
 
 ---
 
-### 4. Instalación de tema para MkDocs
+!!! Success "4. Instalación de tema para MkDocs"
 
 Para visualizar la página necesitas descargar el tema utilizado en tu codigo:
 
@@ -43,7 +43,7 @@ py -m pip install mkdocs-material
 
 ---
 
-### 5. Previsualización en vivo
+!!! Success "5. Previsualización en vivo"
 
 Ejecuta el siguiente comando para iniciar la previsualización en vivo:
 

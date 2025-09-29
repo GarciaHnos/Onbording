@@ -2,14 +2,18 @@
 
 ---
 
-En **MkDocs**, la navegación se define en el archivo de configuración **`mkdocs.yml`** mediante la clave **`nav`**.
+En **MkDocs**, la navegación se define en el archivo de configuración **`mkdocs.yml`** mediante la clave **`nav`**.  
 Esta sección permite organizar los menús y submenús de la documentación, mostrando los archivos **`.md`** en una estructura jerárquica.
 
 ---
 
-#### | **Ejemplo de configuración de navegación**
+!!! note "Tip de navegación"
+    <p style="font-size: 0.75rem; line-height:1.5;">
+    Cada elemento de `nav` puede ser un archivo Markdown o un submenú con otros archivos.  
+    Esto permite tener un menú ordenado y fácil de explorar para los usuarios.
+    </p>
 
-
+---
 
 ```yaml
 nav:
@@ -85,4 +89,7 @@ flowchart LR
 </div>
 ---
 
-✅ Con esta configuración, **MkDocs** genera automáticamente un menú lateral o superior (dependiendo del tema) con la estructura definida en **`nav`**.
+!!! tip
+    <p style="font-size:0.75rem; line-height:1.5;">
+    Con esta configuración, <strong>MkDocs</strong> genera automáticamente un menú lateral o superior (dependiendo del tema) con la estructura definida en <code>nav</code>.
+    </p>
