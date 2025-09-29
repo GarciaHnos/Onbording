@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if page.is_homepage %}
+<style>
+.md-sidebar { display: none !important; }
+</style>
+{% endif %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="preloader-center">
+  <div class="loader-container">
+    <div class="loader-horizontal">
+      <img src="assets/queso.png" alt="queso" style="--i:0;">
+      <img src="assets/leche.png" alt="leche" style="--i:1;">
+      <img src="assets/yogurt.png" alt="yogurt" style="--i:2;">
+      <img src="assets/prod-lacteos.png" alt="prod-lacteos" style="--i:3;">
+    </div>
+    <div class="loader-bar">
+      <div class="loader-fill"></div>
+      <div class="bubbles">
+        <span style="--delay:0s;"></span>
+        <span style="--delay:0.2s;"></span>
+        <span style="--delay:0.4s;"></span>
+        <span style="--delay:0.8s;"></span>
+        <span style="--delay:1.2s;"></span>
+        <span style="--delay:1.4s;"></span>
+        <span style="--delay:1.6s;"></span>
+        <span style="--delay:2s;"></span>
+        <span style="--delay:2.2s;"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hero section -->
+<section class="hero scroll-fade">
+  <img src="assets/logo-gh-blanco.png" alt="Logo García Hnos" class="hero-logo"/>
+  <div class="hero-title">
+    <h1>Bienvenidos al Sector IT de</h1>
+    <div class="typing-wrapper">
+      <span class="typing-text"></span><span class="cursor">|</span>
+    </div>
+  </div>
+  <p class="hero-subtitle">
+    Explorá nuestra documentación, proyectos y estrategias tecnológicas.
+  </p>
+</section>
+
+<!-- Cards estilo macOS -->
+<section class="cards-container scroll-fade">
+
+  <!-- Card 1: Card izquierda, imagen derecha -->
+  <div class="card-wrapper left">
+    <div class="card">
+      <div class="tools">
+        <div class="circle"><span class="red box"></span></div>
+        <div class="circle"><span class="yellow box"></span></div>
+        <div class="circle"><span class="green box"></span></div>
+      </div>
+      <div class="card__content">
+        <div class="card-text">
+          <h2>Propósito</h2>
+          <p>Documentar procesos, comunicar estrategias y presentar arquitectura tecnológica, facilitando información clave para todo el equipo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-img">
+      <img src="assets/Proposito.png" alt="Propósito">
+    </div>
+  </div>
+
+  <!-- Card 2: Card derecha, imagen izquierda -->
+  <div class="card-wrapper right">
+    <div class="card">
+      <div class="tools">
+        <div class="circle"><span class="red box"></span></div>
+        <div class="circle"><span class="yellow box"></span></div>
+        <div class="circle"><span class="green box"></span></div>
+      </div>
+      <div class="card__content">
+        <div class="card-text">
+          <h2>Áreas de Documentación</h2>
+          <ul>
+            <li><b>Procesos y Programas:</b> Buenas prácticas, herramientas y lineamientos.</li>
+            <li><b>Estrategias Nuevos Proyectos:</b> Metodologías, análisis y cronogramas.</li>
+            <li><b>Arquitectura de Sistemas:</b> Diagramas, integración y seguridad.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card-img">
+      <img src="assets/area-de-documentacion.png" alt="Áreas de Documentación">
+    </div>
+  </div>
+
+  <!-- Card 3: Card izquierda, imagen derecha -->
+  <div class="card-wrapper left">
+    <div class="card">
+      <div class="tools">
+        <div class="circle"><span class="red box"></span></div>
+        <div class="circle"><span class="yellow box"></span></div>
+        <div class="circle"><span class="green box"></span></div>
+      </div>
+      <div class="card__content">
+        <div class="card-text">
+          <h2>Valor para la Organización</h2>
+          <p>Centralizar conocimiento fortalece la colaboración, innovación y asegura el éxito de proyectos tecnológicos.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-img">
+      <img src="assets/valor.png" alt="Valor para la Organización">
+    </div>
+  </div>
+
+  <!-- Card 4: Card derecha, imagen izquierda -->
+  <div class="card-wrapper right">
+    <div class="card">
+      <div class="tools">
+        <div class="circle"><span class="red box"></span></div>
+        <div class="circle"><span class="yellow box"></span></div>
+        <div class="circle"><span class="green box"></span></div>
+      </div>
+      <div class="card__content">
+        <div class="card-text">
+          <h2>Participación</h2>
+          <p>Tu aporte mantiene este espacio relevante y útil. ¡Todos construimos un Sector IT más sólido!</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-img">
+      <img src="assets/participacion.png" alt="Participación">
+    </div>
+  </div>
+
+  <!-- Card 5: Card izquierda, imagen derecha -->
+  <div class="card-wrapper left">
+    <div class="card">
+      <div class="tools">
+        <div class="circle"><span class="red box"></span></div>
+        <div class="circle"><span class="yellow box"></span></div>
+        <div class="circle"><span class="green box"></span></div>
+      </div>
+      <div class="card__content">
+        <div class="card-text">
+          <h2>Explorá y Contribuí</h2>
+          <p>Navegá por las secciones, descubrí recursos y sumate a la construcción de nuestro conocimiento colectivo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-img">
+      <img src="assets/explora.png" alt="Explorá y Contribuí">
+    </div>
+  </div>
+
+</section>
+{% endblock %}

@@ -5,21 +5,20 @@ nav:
   - Inicio: index.md
   - Estrategia: estrategia/estrategia.md
   - Event Storming: estrategia/eventStorming.md
-  - Git, GitHub & GitFlow: 
-    - Introduccion: git/introduccionGit/introduccionGit.md
-    - Configuracion Inicial: git/configInicial/configInicial.md
-    - Directorios: git/directorios/directorios.md
-    - Manejo de Repositorios: git/manejoDeRepositorios/manejoDeRepositorios.md
-    - Git Flow: git/gitFlow/gitFlow.md
-  - Draft: 
-    - Relevamiento de Programas: draft/relevamientoProgramas/relevamientoProgramas.md
+  - Git, GitHub & GitFlow:
+      - "<span class='material-icons'>menu_book</span> Introducción": git/introduccionGit/introduccionGit.md
+      - "<span class='material-icons'>settings</span> Configuración Inicial": git/configInicial/configInicial.md
+      - "<span class='material-icons'>folder</span> Directorios": git/directorios/directorios.md
+      - "<span class='material-icons'>storage</span> Manejo de Repositorios": git/manejoDeRepositorios/manejoDeRepositorios.md
+      - "<span class='material-icons'>track_changes</span> Git Flow": git/gitFlow/gitFlow.md
+  - Draft:
+      - "<span class='material-icons'>search</span> Relevamiento de Programas": draft/relevamientoProgramas/relevamientoProgramas.md
   - MkDocs:
-      - Introducción: mkDocs/MkDocs/Introduccion/introduccion-MkDocs.md
-      - Contribución: mkDocs/MkDocs/Contribucion/contribucion.md
-      - Navegación: mkDocs/MkDocs/Navegacion/navegacion.md
-      - Previsualización: mkDocs/MkDocs/Previsualización/previsualizacion.md
-      - Despliegue: mkDocs/MkDocs/Despliegue/despliegue.md   
-  
+      - "<span class='material-icons'>rocket</span> Introducción": mkDocs/MkDocs/Introduccion/introduccion-MkDocs.md
+      - "<span class='material-icons'>group</span> Contribución": mkDocs/MkDocs/Contribucion/contribucion.md
+      - "<span class='material-icons'>explore</span> Navegación": mkDocs/MkDocs/Navegacion/navegacion.md
+      - "<span class='material-icons'>visibility</span> Previsualización": mkDocs/MkDocs/Previsualización/previsualizacion.md
+      - "<span class='material-icons'>cloud_upload</span> Despliegue": mkDocs/MkDocs/Despliegue/despliegue.md
 
 site_author: It
 site_description: >-
@@ -31,32 +30,65 @@ repo_url: https://github.com/GarciaHnos/Onbording
 theme:
   name: material 
   language: es
-  logo: assets/logo-gh.png 
+  toc: false
+  icon:
+    repo: fontawesome/brands/github
+    search: fontawesome/solid/search
+  custom_dir: material/overrides
+  logo: assets/logo-gh-blanco.png
   favicon: assets/logo-gh.png 
-  palette: 
+  palette:
     - scheme: default
       toggle:
-        icon: material/toggle-switch 
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
+        icon: material/weather-night   # ícono modo oscuro
+        name: Cambiar a modo oscuro
     - scheme: slate
       toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to light mode
+        icon: material/weather-sunny  # ícono modo claro
+        name: Cambiar a modo claro
+  features:
+    - navigation.top         # Navbar arriba
+    - navigation.tabs        # Opcional: menús como pestañas
+    - navegación.ruta        # Muestra la ruta de navegación
+    - navigation.sections    # Agrupa secciones
+    - navigation.tracking    # Resalta en qué sección estás
+    - navigation.expand      # Hace que las secciones del menú se expandan
+    - search.suggest    # muestra sugerencias mientras escribís
+    - search.highlight  # resalta los términos en los resultados
+    - search.share      # permite compartir la búsqueda con un link
+    
+    
+    
 markdown_extensions:
-  - admonition 
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+      preserve_tabs: true
 
 plugins:
+  - search
   - glightbox:
       touch: true  # Habilita el soporte táctil para dispositivos móviles
       zoom: true  # Habilita el zoom en las imágenes
       autofocus: true # Habilita el foco automático al abrir
       do_not_load: false # Para cargar el plugin en todas las páginas
 
-markdown_extensions:
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+
+
+extra_css:
+  - styles/menu-oculto.css
+
+extra_javascript:
+  - js/menu.js
+
+extra:
+  features:
+    - navigation.expand
+    - navigation.sections
+  hide:
+    - navigation            # ❌ oculta la barra lateral
+    - toc                   # ❌ oculta tabla de contenido (derecha)
