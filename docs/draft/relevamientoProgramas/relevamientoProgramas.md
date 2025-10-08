@@ -1,3 +1,9 @@
+!!! note "Introducción"
+    🔹Esta tabla contiene un listado de los programas utilizados en planta, 
+    indicando la tecnología, propósito y repositorio asociado.  
+    🔹Sirve como guía rápida para conocer qué hace cada aplicación y dónde encontrar su código.
+
+
 | Nombre     | Tecnología | Proposito | RepoGitHub |
 | ---------- | ---------- | --------- | ---------- |
 | Horas Sueldos  | Java  | Lee marcaciones de relojes biometricos en red y llama a webservice para grabación en Integra (horas sueldos) |       |
