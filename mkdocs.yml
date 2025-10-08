@@ -2,24 +2,34 @@ site_name: García Hermanos Agroindustrial S.R.L.
 site_url: https://garciahnos.github.io/Onbording/
 
 nav:
-  - Inicio: index.md
-  - Estrategia: estrategia/estrategia.md
-  - Event Storming: estrategia/eventStorming.md
-  - Git, GitHub & GitFlow:
-      - "<span class='material-icons'>menu_book</span> Introducción": git/introduccionGit/introduccionGit.md
-      - "<span class='material-icons'>settings</span> Configuración Inicial": git/configInicial/configInicial.md
-      - "<span class='material-icons'>folder</span> Directorios": git/directorios/directorios.md
-      - "<span class='material-icons'>storage</span> Manejo de Repositorios": git/manejoDeRepositorios/manejoDeRepositorios.md
-      - "<span class='material-icons'>track_changes</span> Git Flow": git/gitFlow/gitFlow.md
-  - Draft:
-      - "<span class='material-icons'>search</span> Relevamiento de Programas": draft/relevamientoProgramas/relevamientoProgramas.md
-  - MkDocs:
-      - "<span class='material-icons'>rocket</span> Introducción": mkDocs/MkDocs/Introduccion/introduccion-MkDocs.md
-      - "<span class='material-icons'>group</span> Contribución": mkDocs/MkDocs/Contribucion/contribucion.md
-      - "<span class='material-icons'>explore</span> Navegación": mkDocs/MkDocs/Navegacion/navegacion.md
-      - "<span class='material-icons'>visibility</span> Previsualización": mkDocs/MkDocs/Previsualización/previsualizacion.md
-      - "<span class='material-icons'>cloud_upload</span> Despliegue": mkDocs/MkDocs/Despliegue/despliegue.md
-
+  - <b>Inicio</b>: index.md
+  - <b>Enfoque Metodológico</b>:
+      - <b>Git</b>: 
+          - "<span class='material-icons'>menu_book</span> Introducción": git/introduccionGit/introduccionGit.md
+          - "<span class='material-icons'>settings</span> Configuración Inicial": git/configInicial/configInicial.md
+          - "<span class='material-icons'>folder</span> Directorios": git/directorios/directorios.md
+          - "<span class='material-icons'>storage</span> Manejo de Repositorios": git/manejoDeRepositorios/manejoDeRepositorios.md
+          - "<span class='material-icons'>track_changes</span> Git Flow": git/gitFlow/gitFlow.md
+      - <b> Nomenclatura Cammel</b>:
+          - "<span class='material-icons'>code</span> Nomenclatura Cammel": estrategia/nomenclatura.md
+  - <b>Proyectos</b>: 
+      - "<b><span class='material-icons'>search</span> Relevamiento de Programas</b>": draft/relevamientoProgramas/relevamientoProgramas.md
+  - <b>Contribución</b>:
+      - "<span class='material-icons'>rocket</span> Introducción": contribucion/introduccion/introduccion.md
+      - <b>MkDocs</b>:
+          - "<span class='material-icons'>group</span> Contribución": MkDocs/Contribucion/contribucion.md
+          - "<span class='material-icons'>explore</span> Navegación": MkDocs/Navegacion/navegacion.md
+          - "<span class='material-icons'>visibility</span> Previsualización": MkDocs/Previsualización/previsualizacion.md
+          - "<span class='material-icons'>cloud_upload</span> Despliegue": MkDocs/Despliegue/despliegue.md
+      - <b>Markdown</b>:
+          - "<span class='material-icons'>code</span> Introducción": MarkDown/Introduccion/Introduccion.md
+          - "<span class='material-icons'>code</span> Sintaxis Básica": MarkDown/Sintaxis_Basica/sintaxis_basica.md
+          - "<span class='material-icons'>code</span> Sintaxis Avanzada": MarkDown/Sintaxis_Avanzada/Sintaxis_avanzada.md
+  - <b>DevOps</b>:    
+      - <b> Proyectos</b>:
+          - "<b><span class='material-icons'>rocket</span> Onbording</b>": 
+              - "<span class='material-icons'>cloud_upload</span> Despliegue": basura\expli-despliegue.md
+  
 site_author: It
 site_description: >-
   Onbording
@@ -47,15 +57,16 @@ theme:
         icon: material/weather-sunny  # ícono modo claro
         name: Cambiar a modo claro
   features:
-    - navigation.top         # Navbar arriba
-    - navigation.tabs        # Opcional: menús como pestañas
-    - navegación.ruta        # Muestra la ruta de navegación
-    - navigation.sections    # Agrupa secciones
-    - navigation.tracking    # Resalta en qué sección estás
-    - navigation.expand      # Hace que las secciones del menú se expandan
-    - search.suggest    # muestra sugerencias mientras escribís
-    - search.highlight  # resalta los términos en los resultados
-    - search.share      # permite compartir la búsqueda con un link
+    - navigation.top           # Navbar arriba
+    - navigation.tabs          # Opcional: menús como pestañas
+    - navigation.tracking      # Resalta en qué sección estás
+    - search.suggest           # muestra sugerencias mientras escribís
+    - search.highlight         # resalta los términos en los resultados
+    - search.share             # permite compartir la búsqueda con un link
+    - content.code.annotate
+    - content.tabs.link 
+    - toc.follow
+
     
     
     
@@ -81,14 +92,8 @@ plugins:
 
 extra_css:
   - styles/menu-oculto.css
+  - https://fonts.googleapis.com/icon?family=Material+Icons
 
 extra_javascript:
   - js/menu.js
-
-extra:
-  features:
-    - navigation.expand
-    - navigation.sections
-  hide:
-    - navigation            # ❌ oculta la barra lateral
-    - toc                   # ❌ oculta tabla de contenido (derecha)
+  - js/smooth-scroll.js

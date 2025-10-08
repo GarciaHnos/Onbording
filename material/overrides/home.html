@@ -8,14 +8,16 @@
 </style>
 {% endif %}
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 <div class="preloader-center">
   <div class="loader-container">
     <div class="loader-horizontal">
-      <img src="assets/queso.png" alt="queso" style="--i:0;">
-      <img src="assets/leche.png" alt="leche" style="--i:1;">
-      <img src="assets/yogurt.png" alt="yogurt" style="--i:2;">
-      <img src="assets/prod-lacteos.png" alt="prod-lacteos" style="--i:3;">
+      <img src="assets/dulce_de_leche.webp" alt="dulce_de_leche" style="--i:0;">
+      <img src="assets/leche.webp" alt="leche" style="--i:1;">
+      <img src="assets/yogurt.webp" alt="yogurt" style="--i:2;">
+      <img src="assets/queso.webp" alt="queso" style="--i:3;">
     </div>
     <div class="loader-bar">
       <div class="loader-fill"></div>
@@ -36,7 +38,17 @@
 
 <!-- Hero section -->
 <section class="hero scroll-fade">
-  <img src="assets/logo-gh-blanco.png" alt="Logo García Hnos" class="hero-logo"/>
+  <!-- Video de fondo -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/Fondo.mp4" type="video/mp4">
+  </video>
+
+
+  <!-- Contenido encima del video -->
+  <!-- Dos versiones del logo -->
+  <img src="assets/logo-gh.png" alt="Logo García Hermanos" class="hero-logo logo-claro">
+  <img src="assets/logo-gh-blanco.png" alt="Logo García Hermanos" class="hero-logo logo-oscuro">
+
   <div class="hero-title">
     <h1>Bienvenidos al Sector IT de</h1>
     <div class="typing-wrapper">

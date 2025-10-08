@@ -3,6 +3,14 @@ function hidePreloaderAndInit(){
   const preloader = document.querySelector(".preloader-center");
   if(!preloader) return;
 
+  // Usamos sessionStorage para que dure solo la sesión actual
+  const alreadyVisited = sessionStorage.getItem("visited");
+  if(alreadyVisited){
+    preloader.style.display = "none";
+    startAfterPreloader();
+    return;
+  }
+
   const delay = 5000; // 5s de preloader
 
   setTimeout(()=>{
@@ -10,10 +18,14 @@ function hidePreloaderAndInit(){
     preloader.style.opacity = 0;
     setTimeout(()=>{
       preloader.style.display = "none";
-      startAfterPreloader(); // Inicia tipado y scroll fade
+      startAfterPreloader();
+      // Marcamos que ya visitó en esta sesión
+      sessionStorage.setItem("visited", "true");
     }, 500);
   }, delay);
 }
+
+
 
 // ---------------- Inicia efectos después del preloader ----------------
 function startAfterPreloader(){
@@ -62,23 +74,6 @@ function initScrollFade(){
   fadeElems.forEach(el => observer.observe(el));
 }
 
-// ---------------- Animación de imágenes en órbita ----------------
-function initOrbitImages(){
-  const imgs = document.querySelectorAll(".orbit-img");
-  if(imgs.length === 0) return;
-
-  imgs.forEach((img, i)=>{
-    setTimeout(()=>{
-      img.style.opacity = 1;
-      img.style.transform = "scale(1)";
-    }, i * 500);
-  });
-
-  setTimeout(()=>{
-    imgs.forEach(img => img.classList.add("orbit-spin"));
-  }, imgs.length * 500);
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   const bubblesContainer = document.querySelector(".bubbles");
   if(!bubblesContainer) return; // Si no existe, corta la ejecución
@@ -118,6 +113,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   loadMaterialIcons();
 });
 
+// ...existing code...
 document.addEventListener("md:content-loaded", ()=>{
   hidePreloaderAndInit();
   loadMaterialIcons();
