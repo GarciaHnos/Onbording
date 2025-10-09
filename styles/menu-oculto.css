@@ -45,8 +45,8 @@ body {
 }
 
 .loader-horizontal img {
-  width: 80px;
-  height: 80px;
+  width: 55px;
+  height: 55px;
   opacity: 0;
   animation: bounce 1s ease-in-out infinite, appear 0.5s forwards;
   animation-delay: calc(var(--i) * 0.3s);
@@ -215,6 +215,10 @@ body {
   max-width: 1300px;
   margin: 0 auto;
   padding: 2rem;
+} 
+
+.md-content__inner:before {
+  height: 0 !important;
 }
 
 /* Saca el sidebar y la restricción de ancho */
@@ -227,50 +231,95 @@ body {
   max-width: 100% !important;
 }
 
-/* Hero a pantalla completa */
+/* Contenedor hero */
 .hero {
   position: relative;
-  top: -30px;
-  width: 100vw; /* ocupa todo el ancho real */
-  height: 100vh; /* ocupa todo el alto de la ventana */
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* para poder subir el contenido */
   align-items: center;
   text-align: center;
-  color: #FFFFFF;
-  margin: 0 !important; 
+  color: #fff;
+  margin: 0 !important;
+  padding-top: 4rem; /* distancia desde el encabezado */
+  overflow: hidden;
+}
+
+/* Video de fondo */
+.hero-video {
+  position: absolute;
+  margin: 0 !important;
   padding: 0 !important;
+  top: -10px; /* ajusta según el video */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Hero en tema claro */
-[data-md-color-scheme="default"] .hero {
-  background: linear-gradient(to bottom, #4051b5 0%, #4e4ccf 70%, #ffffff 100%);
+/* Overlay degradado encima del video */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 
-/* Hero en tema oscuro */
-[data-md-color-scheme="slate"] .hero {
-  background: linear-gradient(to bottom, #4051b5 0%, #4e4ccf 70%, #1e2129 100%);
+/* Gradient según tema */
+[data-md-color-scheme="default"] .hero::after {
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 20%, rgba(255,255,255,1) 70%);
 }
 
-.hero-logo {
+[data-md-color-scheme="slate"] .hero::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 5%,       
+    rgb(30, 33, 41) 68%,  
+    #1e2129 100%
+  );
+}
+
+/* Contenido (logo, título, subtítulo) */
+.hero-logo,
+.hero-title,
+.hero-subtitle {
+  position: relative;
+  z-index: 10;
+}
+
+/* Por defecto ocultamos ambos */
+.logo-claro,
+.logo-oscuro {
+  display: none;
+  position: relative;
+  z-index: 10;
   width: 620px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.3rem;
   animation: logoBounce 1.5s ease-in-out infinite alternate;
 }
 
+.logo-claro, .logo-oscuro { display: none; }
+[data-md-color-scheme="default"] .logo-claro { display: block !important; }
+[data-md-color-scheme="slate"] .logo-oscuro { display: block !important; }
+
+/* Animación logo */
 @keyframes logoBounce {
   from { transform: translateY(0); }
   to { transform: translateY(-10px); }
 }
 
-
 /* Título principal */
 .hero-title {
-  display: flex;           /* pone título + typing en fila */
-  align-items: baseline;   /* alinea por la base de las letras */
-  gap: 10px;               /* espacio entre título y typing */
-  justify-content: center; /* centra en la pantalla */
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 0.5rem; /* subido junto al logo */
 }
 
 .hero-title h1 {
@@ -280,21 +329,31 @@ body {
   text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
 }
 
+/* Texto oscuro en modo claro */
+[data-md-color-scheme="default"] .hero-title h1,
+[data-md-color-scheme="default"] .typing-wrapper,
+[data-md-color-scheme="default"] .hero-subtitle {
+  color: #1e2129 !important;
+  text-shadow: none;
+}
+
 .typing-wrapper {
   font-size: 2.2rem;
-  height: 2.7rem;          /* altura fija para evitar salto */
-  overflow: hidden;        /* oculta el texto que se sale */
+  height: 2.7rem;
+  overflow: hidden;
   color: #ffffff;
   text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
 }
+
 /* Subtítulo */
 .hero-subtitle {
   font-size: 1.5rem;
   opacity: 0.9;
   animation: fadeIn 2s ease forwards;
+  margin-top: 0.5rem;
 }
 
-
+/* Animación fadeIn */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -317,8 +376,27 @@ body {
   gap: 80px; 
   max-width: 1000px;
   margin: 0 auto;
-  color: #868686;
+  color: #7a7a7a;
   padding-bottom: 20px;
+}
+
+/* Card estilo macOS */
+.card {
+  width: 100%;
+  background-color: #2b2d33;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  overflow: hidden;
+  padding-top: -20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-md-color-scheme="default"] .card {
+  background-color: #f4f6fa;
+}
+
+[data-md-color-scheme="slate"] .card {
+  background-color: #2b2d33;
 }
 
 .card-wrapper {
@@ -335,17 +413,6 @@ body {
 /* Card a la derecha, imagen a la izquierda */
 .card-wrapper.right {
   flex-direction: row-reverse;
-}
-
-/* Card estilo macOS */
-.card {
-  width: 100%;
-  background-color: #fcfdff;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  overflow: hidden;
-  padding-top: -20px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
@@ -415,6 +482,14 @@ body {
 
 /* Opcional: agrandar título del admonition */
 .md-typeset .admonition-title {
-    font-size: 0.75rem; 
-    font-weight: bold;
+  font-size: 0.8rem !important; 
+
 }
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-width: 0;
+  border-left-width: 4px;
+  font-size: 0.75rem;
+}
+
