@@ -18,4 +18,4 @@ Las extensiones en Markdown permiten ampliar sus funciones básicas, añadiendo 
 **Algunas de esa es:**
 * [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
 ---
-![imagen del código](./img/Código.png)
+![imagen del código](./img/Codigo.png)
