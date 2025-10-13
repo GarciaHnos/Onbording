@@ -5,30 +5,30 @@ nav:
   - <b>Inicio</b>: index.md
   - <b>Enfoque Metodológico</b>:
       - <b>Git</b>: 
-          - "<span class='material-icons'>menu_book</span> Introducción": git/introduccionGit/introduccionGit.md
-          - "<span class='material-icons'>settings</span> Configuración Inicial": git/configInicial/configInicial.md
-          - "<span class='material-icons'>folder</span> Directorios": git/directorios/directorios.md
-          - "<span class='material-icons'>storage</span> Manejo de Repositorios": git/manejoDeRepositorios/manejoDeRepositorios.md
-          - "<span class='material-icons'>track_changes</span> Git Flow": git/gitFlow/gitFlow.md
+          - "<span class='material-icons'>menu_book</span> Introducción": enfoque-metodologico/git/introduccionGit/introduccionGit.md
+          - "<span class='material-icons'>settings</span> Configuración Inicial": enfoque-metodologico/git/configInicial/configInicial.md
+          - "<span class='material-icons'>folder</span> Directorios": enfoque-metodologico/git/directorios/directorios.md
+          - "<span class='material-icons'>storage</span> Manejo de Repositorios": enfoque-metodologico/git/manejoDeRepositorios/manejoDeRepositorios.md
+          - "<span class='material-icons'>track_changes</span> Git Flow": enfoque-metodologico/git/gitFlow/gitFlow.md
       - <b> Nomenclatura Cammel</b>:
-          - "<span class='material-icons'>code</span> Nomenclatura Cammel": estrategia/nomenclatura.md
+          - "<span class='material-icons'>code</span> Nomenclatura Cammel": enfoque-metodologico\nomeclatura\nomenclatura.md
   - <b>Proyectos</b>: 
-      - "<b><span class='material-icons'>search</span> Relevamiento de Programas</b>": draft/relevamientoProgramas/relevamientoProgramas.md
+      - "<b><span class='material-icons'>search</span> Relevamiento de Programas</b>": proyectos\relevamientoProgramas\relevamientoProgramas.md
   - <b>Contribución</b>:
       - "<span class='material-icons'>rocket</span> Introducción": contribucion/introduccion/introduccion.md
       - <b>MkDocs</b>:
-          - "<span class='material-icons'>group</span> Contribución": MkDocs/Contribucion/contribucion.md
-          - "<span class='material-icons'>explore</span> Navegación": MkDocs/Navegacion/navegacion.md
-          - "<span class='material-icons'>visibility</span> Previsualización": MkDocs/Previsualización/previsualizacion.md
-          - "<span class='material-icons'>cloud_upload</span> Despliegue": MkDocs/Despliegue/despliegue.md
+          - "<span class='material-icons'>group</span> Contribución": contribucion\mkDocs\Contribucion\contribucion.md
+          - "<span class='material-icons'>explore</span> Navegación": contribucion\mkDocs\Navegacion\navegacion.md
+          - "<span class='material-icons'>visibility</span> Previsualización": contribucion\mkDocs\Previsualización\previsualizacion.md
+          - "<span class='material-icons'>cloud_upload</span> Despliegue": contribucion\mkDocs\Despliegue\despliegue.md
       - <b>Markdown</b>:
-          - "<span class='material-icons'>code</span> Introducción": MarkDown/Introduccion/Introduccion.md
-          - "<span class='material-icons'>code</span> Sintaxis Básica": MarkDown/Sintaxis_Basica/sintaxis_basica.md
-          - "<span class='material-icons'>code</span> Sintaxis Avanzada": MarkDown/Sintaxis_Avanzada/Sintaxis_avanzada.md
+          - "<span class='material-icons'>code</span> Introducción": contribucion\MarkDown\Introduccion\Introduccion.md
+          - "<span class='material-icons'>code</span> Sintaxis Básica": contribucion\MarkDown\Sintaxis_Basica\sintaxis_basica.md
+          - "<span class='material-icons'>code</span> Sintaxis Avanzada": contribucion\MarkDown\Sintaxis_Avanzada\Sintaxis_avanzada.md
   - <b>DevOps</b>:    
       - <b> Proyectos</b>:
           - "<b><span class='material-icons'>rocket</span> Onbording</b>": 
-              - "<span class='material-icons'>cloud_upload</span> Despliegue": basura\expli-despliegue.md
+              - "<span class='material-icons'>cloud_upload</span> Despliegue": basura/expli-despliegue.md
   
 site_author: It
 site_description: >-
@@ -91,9 +91,8 @@ plugins:
 
 
 extra_css:
-  - styles/menu-oculto.css
+  - assets/styles/menu-oculto.css
   - https://fonts.googleapis.com/icon?family=Material+Icons
 
 extra_javascript:
-  - js/menu.js
-  - js/smooth-scroll.js
+  - assets/js/menu.js
