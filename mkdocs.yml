@@ -11,25 +11,31 @@ nav:
           - "<span class='material-icons'>storage</span> Manejo de Repositorios": enfoque-metodologico/git/manejoDeRepositorios/manejoDeRepositorios.md
           - "<span class='material-icons'>track_changes</span> Git Flow": enfoque-metodologico/git/gitFlow/gitFlow.md
       - <b> Nomenclatura Cammel</b>:
-          - "<span class='material-icons'>code</span> Nomenclatura Cammel": enfoque-metodologico\nomeclatura\nomenclatura.md
+          - "<span class='material-icons'>code</span> Nomenclatura Cammel": enfoque-metodologico/nomeclatura/nomenclatura.md
+      - <b>Principios SOLID</b>:
+          - "<span class='material-icons'>lightbulb</span> Principios SOLID": enfoque-metodologico/principiosSOLID/principios_solid.md
+      - <b>Clean Code</b>:
+          - "<span class='material-icons'>clean_hands</span> Clean Code": enfoque-metodologico/clean-code/cleancode.md
+      - <b>Clean Architecture</b>: 
+          - "<span class='material-icons'>architecture</span> Clean Architecture": enfoque-metodologico/clean-architecture/cleanarchitecture.md
   - <b>Proyectos</b>: 
-      - "<b><span class='material-icons'>search</span> Relevamiento de Programas</b>": proyectos\relevamientoProgramas\relevamientoProgramas.md
+      - "<b><span class='material-icons'>search</span> Relevamiento de Programas</b>": proyectos/relevamientoProgramas/relevamientoProgramas.md
   - <b>Contribución</b>:
       - "<span class='material-icons'>rocket</span> Introducción": contribucion/introduccion/introduccion.md
       - <b>MkDocs</b>:
           - "<span class='material-icons'>group</span> Contribución": contribucion/mkDocs/Contribucion/contribucion.md
-          - "<span class='material-icons'>explore</span> Navegación": contribucion\mkDocs\Navegacion\navegacion.md
-          - "<span class='material-icons'>visibility</span> Previsualización": contribucion\mkDocs\Previsualización\previsualizacion.md
-          - "<span class='material-icons'>cloud_upload</span> Despliegue": contribucion\mkDocs\Despliegue\despliegue.md
+          - "<span class='material-icons'>explore</span> Navegación": contribucion/mkDocs/Navegacion/navegacion.md
+          - "<span class='material-icons'>visibility</span> Previsualización": contribucion/mkDocs/Previsualización/previsualizacion.md
+          - "<span class='material-icons'>cloud_upload</span> Despliegue": contribucion/mkDocs/Despliegue/despliegue.md
       - <b>Markdown</b>:
-          - "<span class='material-icons'>code</span> Introducción": contribucion\MarkDown\Introduccion\Introduccion.md
-          - "<span class='material-icons'>code</span> Sintaxis Básica": contribucion\MarkDown\Sintaxis_Basica\sintaxis_basica.md
-          - "<span class='material-icons'>code</span> Sintaxis Avanzada": contribucion\MarkDown\Sintaxis_Avanzada\Sintaxis_avanzada.md
+          - "<span class='material-icons'>code</span> Introducción": contribucion/MarkDown/Introduccion/Introduccion.md
+          - "<span class='material-icons'>code</span> Sintaxis Básica": contribucion/MarkDown/Sintaxis_Basica/sintaxis_basica.md
+          - "<span class='material-icons'>code</span> Sintaxis Avanzada": contribucion/MarkDown/Sintaxis_Avanzada/Sintaxis_avanzada.md
   - <b>DevOps</b>:    
       - <b> Proyectos</b>:
           - "<b><span class='material-icons'>rocket</span> Onbording</b>": 
-              - "<span class='material-icons'>cloud_upload</span> Despliegue": basura/expli-despliegue.md
-  
+              - "<span class='material-icons'>cloud_upload</span> Despliegue": devops/onbording/expli-despliegue.md
+
 site_author: It
 site_description: >-
   Onbording
