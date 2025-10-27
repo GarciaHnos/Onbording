@@ -13,10 +13,6 @@
          <lastmod>2025-10-27</lastmod>
     </url>
     <url>
-         <loc>https://garciahnos.github.io/Onbording/basura/expli-despliegue/</loc>
-         <lastmod>2025-10-27</lastmod>
-    </url>
-    <url>
          <loc>https://garciahnos.github.io/Onbording/basura/introduccion/</loc>
          <lastmod>2025-10-27</lastmod>
     </url>
@@ -81,6 +77,18 @@
          <lastmod>2025-10-27</lastmod>
     </url>
     <url>
+         <loc>https://garciahnos.github.io/Onbording/devops/onbording/expli-despliegue/</loc>
+         <lastmod>2025-10-27</lastmod>
+    </url>
+    <url>
+         <loc>https://garciahnos.github.io/Onbording/enfoque-metodologico/clean-architecture/cleanarchitecture/</loc>
+         <lastmod>2025-10-27</lastmod>
+    </url>
+    <url>
+         <loc>https://garciahnos.github.io/Onbording/enfoque-metodologico/clean-code/cleancode/</loc>
+         <lastmod>2025-10-27</lastmod>
+    </url>
+    <url>
          <loc>https://garciahnos.github.io/Onbording/enfoque-metodologico/git/configInicial/configInicial/</loc>
          <lastmod>2025-10-27</lastmod>
     </url>
@@ -102,6 +110,10 @@
     </url>
     <url>
          <loc>https://garciahnos.github.io/Onbording/enfoque-metodologico/nomeclatura/nomenclatura/</loc>
+         <lastmod>2025-10-27</lastmod>
+    </url>
+    <url>
+         <loc>https://garciahnos.github.io/Onbording/enfoque-metodologico/principiosSOLID/principios_solid/</loc>
          <lastmod>2025-10-27</lastmod>
     </url>
     <url>
