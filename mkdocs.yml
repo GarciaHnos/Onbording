@@ -17,7 +17,7 @@ nav:
   - <b>Contribución</b>:
       - "<span class='material-icons'>rocket</span> Introducción": contribucion/introduccion/introduccion.md
       - <b>MkDocs</b>:
-          - "<span class='material-icons'>group</span> Contribución": contribucion\mkDocs\Contribucion\contribucion.md
+          - "<span class='material-icons'>group</span> Contribución": contribucion/mkDocs/Contribucion/contribucion.md
           - "<span class='material-icons'>explore</span> Navegación": contribucion\mkDocs\Navegacion\navegacion.md
           - "<span class='material-icons'>visibility</span> Previsualización": contribucion\mkDocs\Previsualización\previsualizacion.md
           - "<span class='material-icons'>cloud_upload</span> Despliegue": contribucion\mkDocs\Despliegue\despliegue.md
