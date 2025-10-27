@@ -114,39 +114,53 @@ body {
   100% { transform: translateX(100px) translateY(0) scale(1); opacity:0.7; }
 }
 
+/* Saca el sidebar y la restricción de ancho */
+.md-main,
+.md-main__inner,
+.md-content {
+  margin: 0 !important;
+  padding: 5px !important; 
+  max-width: 100% !important;
+}
+
 /* ===== Contenedor del buscador ===== */
+/* (Tu diseño original) */
 .md-search {
-    width: 220px;               /* ancho del buscador */
+    width: 220px;
     position: relative;
     margin-left: 20px;
 }
 
 /* ===== Input de búsqueda ===== */
+/* (Tu diseño original) */
 .md-search input {
     width: 100%;
-    padding: 10px 5px;         /* más espacio dentro */
-    border-radius: 5px;         /* súper redondeado */
-    border: none;                /* sin borde clásico */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* sombra moderna */
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     font-size: 15px;
-    transition: all 0.3s ease;   /* suaviza hover y focus */
+    transition: all 0.3s ease;
+    padding-left: 15px; /* Damos espacio por si acaso */
 }
 
 /* ===== Input en focus ===== */
+/* (Tu diseño original) */
 .md-search input:focus {
     outline: none;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.35), 0 0 0 3px #5a9fff; /* glow azul */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35), 0 0 0 1.5px #5a9fff;
 }
 
-/* ===== Icono de búsqueda ===== */
+/* ===== Oculta el icono de lupa de la BARRA (por si acaso) ===== */
 .md-search .md-search-icon {
-    color: #1f334e;              /* azul llamativo */
+    display: none !important;
 }
 
-/* ===== Caja de resultados ===== */
+/* ===== Caja de resultados (Dropdown) ===== */
+/* (Tu diseño original) */
 .md-search .md-search-results {
     position: absolute;
-    top: 105%;                    /* justo debajo del input */
+    top: 105%;
     left: 0;
     width: 100%;
     background-color: #1f1f1f;
@@ -157,21 +171,48 @@ body {
     z-index: 9999;
 }
 
-/* ===== Cada resultado ===== */
-.md-search .md-search-result {
-    padding: 10px 15px;
-    border-bottom: 1px solid #333;
-    transition: all 0.2s ease;
-    border-radius: 10px;
+/* ===== Lista de resultados (el <ul>) ===== */
+/* Solo le damos padding para que los items no se peguen a los bordes */
+.md-search-result {
+    padding: 8px;
+    /* Quitamos los estilos de "item" que tenías aquí */
 }
 
-/* ===== Hover de resultado ===== */
-.md-search .md-search-result:hover {
+
+/* ================================================================ */
+/* ===== AQUÍ ESTÁ LA MAGIA (PUNTOS 1 Y 2) ===== */
+/* ================================================================ */
+
+/* 1. OCULTA EL ICONO DEL RESULTADO (el que encontraste) */
+.md-search-result__icon {
+    display: none !important;
+}
+
+/* 2. ARREGLA EL AMONTONAMIENTO (aplicando TUS estilos al item correcto) */
+.md-search-result__item {
+    /* Tus estilos de "item" (padding, borde, transición) van AQUÍ */
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+
+    /* AÑADIMOS MARGEN para que no se pisen */
+    margin-top: 5px;
+}
+
+/* Quitamos el margen al primer item de la lista */
+.md-search-result__item:first-child {
+    margin-top: 0;
+}
+
+/* Hover (en el selector correcto) */
+.md-search-result__item:hover {
     color: #fff;
-    transform: scale(1.01);        /* efecto “pop” al pasar el mouse */
+    transform: scale(1.01);
+    background-color: #2c2c2c;
 }
 
 /* ===== Scrollbar personalizada ===== */
+/* (Tu código original) */
 .md-search .md-search-results::-webkit-scrollbar {
     width: 6px;
 }
@@ -219,16 +260,6 @@ body {
 
 .md-content__inner:before {
   height: 0 !important;
-}
-
-/* Saca el sidebar y la restricción de ancho */
-.md-main, 
-.md-main__inner, 
-.md-content, 
-.md-typeset {
-  margin: 0 !important;
-  padding: 0 !important;
-  max-width: 100% !important;
 }
 
 /* Contenedor hero */
