@@ -3,9 +3,29 @@
 {% block content %}
 
 {% if page.is_homepage %}
+{% if page.is_homepage %}
 <style>
-.md-sidebar { display: none !important; }
+  /* Oculta el sidebar en la home */
+  .md-sidebar { 
+    display: none !important; 
+  }
+  
+  /* ANULA el padding-top de extra.css SÓLO EN LA HOME */
+  .md-content__inner {
+    padding-top: 0 !important;
+  }
+
+  /* Quita el resto de márgenes/paddings para la home */
+  .md-main, 
+  .md-main__inner, 
+  .md-content, 
+  .md-typeset {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
 </style>
+{% endif %}
 {% endif %}
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
