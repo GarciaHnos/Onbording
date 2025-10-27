@@ -34,5 +34,3 @@ Esto nos permite trabajar en equipo con claridad, mantener un estilo uniforme y 
 
 !!! note ""
     Clean Code es nuestro **estándar base**: lo aplicamos desde la primera línea hasta la última, asegurando claridad, orden y escalabilidad.
-
----

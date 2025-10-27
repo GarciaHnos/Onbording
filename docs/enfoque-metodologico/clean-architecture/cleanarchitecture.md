@@ -34,5 +34,3 @@ Nuestros proyectos están organizados en **cuatro niveles esenciales**, que sepa
 ✅ **Escalar y mantener** proyectos grandes con facilidad.  
 ✅ Escribir código **independiente, testeable y flexible**.  
 ✅ Separar responsabilidades para **facilitar el trabajo en equipo**.
-
-<br>

@@ -36,6 +36,3 @@ Cada letra representa un pilar que guía cómo estructuramos las clases, depende
 ✅ **Código legible:** cualquier dev entiende la lógica en minutos.  
 ✅ **Reutilización:** más trabajo en equipo, menos código repetido.  
 ✅ **Escalabilidad natural:** los proyectos crecen sin volverse caóticos.
-
-<br>
-
