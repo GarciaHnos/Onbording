@@ -67,7 +67,6 @@ theme:
     - navigation.tabs          # Opcional: menús como pestañas
     - navigation.tracking      # Resalta en qué sección estás
     - search.highlight         # resalta los términos en los resultados
-    - search.share             # permite compartir la búsqueda con un link
     - content.code.annotate
     - content.tabs.link 
     - toc.follow
