@@ -11,7 +11,7 @@ function hidePreloaderAndInit(){
     return;
   }
 
-  const delay = 5000; // 5s de preloader
+  const delay = 3000; // 3s de preloader
 
   setTimeout(()=>{
     preloader.style.transition = "opacity 0.5s ease";
